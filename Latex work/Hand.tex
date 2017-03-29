@@ -1,6 +1,7 @@
 \documentclass[conference]{IEEEtran}
 \usepackage{graphicx}
 \usepackage{mathtools}
+\usepackage{cite}
 \graphicspath{ {images/}}
 \bibliographystyle{plain}
 % Some Computer Society conferences also require the compsoc mode option,
@@ -279,24 +280,6 @@
 % affiliations
 
 
-\author{\IEEEauthorblockN{Michael Shell}
-\IEEEauthorblockA{School of Electrical and\\Computer Engineering\\
-Georgia Institute of Technology\\
-Atlanta, Georgia 30332--0250\\
-Email: http://www.michaelshell.org/contact.html}
-\and
-\IEEEauthorblockN{Homer Simpson}
-\IEEEauthorblockA{Twentieth Century Fox\\
-Springfield, USA\\
-Email: homer@thesimpsons.com}
-\and
-\IEEEauthorblockN{James Kirk\\ and Montgomery Scott}
-\IEEEauthorblockA{Starfleet Academy\\
-San Francisco, California 96678--2391\\
-Telephone: (800) 555--1212\\
-Fax: (888) 555--1212}}
-
-
 \author{\IEEEauthorblockN{D.K. Vishwakarma\IEEEauthorrefmark{1}  Sahib Majithia\IEEEauthorrefmark{2} Nikhil Kumar Mishra\IEEEauthorrefmark{3}}
 \IEEEauthorblockA{Department of Electronics and Communication Engineering,
 \\Delhi Technological University\\
@@ -341,8 +324,13 @@ Email: \IEEEauthorrefmark{1}dvishwakarma@gmail.com ,\IEEEauthorrefmark{2}sahibma
 % As a general rule, do not put math, special symbols or citations
 % in the abstract
 \begin{abstract}
-Gesture recognition aims at recognizing meaningful expressions of motion by a human, involving the hands, arms, face, head, or body. It is of great importance in designing an intelligent and efficient human-computer interface. We take into account the two possible fixed geometries to work on. The proposed methods follow the procedure of Preprocessing: which helps with noise removal and image enhancement; Segmentation of hand region: uses skin likelihood method to extract skin color; Feature extraction: Morphological and geometry based functions are used to extract the fingers; and active fingers are counted by method of Rule based Classification. In order to test performance, an experiment is conducted using standard and a self-generated dataset of images. The accuracy achieved on these dataset is greater than on similar state of arts. \\ \\
-\textrm{Keywords: \textit{Hand Gestures, Skin Segmentation, Active Fingers, Finger Count, Mask Generation, Recognition, Low Resolution}}  
+Gesture recognition aims at recognizing meaningful expressions of motion by humans which involve the hands, arms, face, head, or body. It holds great importance in designing an intelligent and efficient human-computer interface. We take into account the two possible fixed geometries to work on. The proposed methods follow the procedure of Preprocessing: which helps with noise removal and image enhancement; Segmentation of hand region: uses skin likelihood method to extract skin color; Feature extraction: Morphological and geometry based functions are used to extract the fingers; and active fingers are counted by method of Rule based Classification. In order to test performance, an experiment is conducted using standard and a self-generated dataset of images. The accuracy achieved on these dataset is greater than on similar state of arts. \\ \\
+
+\begin{IEEEkeywords}
+\textit{Hand Gestures, Skin Segmentation, Active Fingers, Finger Count, Mask Generation, Recognition, Low Resolution}
+
+\end{IEEEkeywords}
+ 
 \end{abstract}
 
 % no keywords
@@ -367,6 +355,9 @@ In the present day framework of interactive, intelligent computing, an efficient
 Gesture recognition is the mathematical interpretation of a human motion by a computing device
 
  There are methods which used additional hardware devices such as data glove devices and color markers to easily extract a comprehensive description of gesture features for recognition [1]. Neural Network classifier has been applied for gestures classification [2] but it is time consuming and when the number of training data increases, the time needed for classification are increased too .Orientation histogram method [3] has some problems which are; different gestures could have similar orientation histograms, and similar gestures might have different orientation histograms. Other methods based on the appearance of the hand use skin color to segment the hand and extract necessary features, these methods are considered easy, natural and less computationally costly compared with methods mentioned before [1].
+
+Sign Language Recognition, Robot Control automation of home appliances and presentation control are few of many applications of hand gesture recognition systems. Usage of hand gestures can be extended to control real time applications like VLC media player, paint, pdf reader etc. This wireless control of embedded instruments is a great progress towards the field of embedded vision and automation.
+
 This paper proposes two methods for counting the number of active fingers. These are proposed based on the geometric facts of the hand region. 
 
 Since the proposed method works on geometric properties and does not require any extracted features; it works well on low-resolution images which is a great advantage for developers regarding data storage.
@@ -404,44 +395,49 @@ The most important part of hand gesture recognition is the skin segmentation. Se
 The transformation of the original RGB colour image is done using
 the following equations:
 
-$Y = 0.2990R + 0.5870G + 0.1140B$
+\begin{equation}
+ Y = 0.2990R + 0.5870G + 0.1140B
+\end{equation}
+\begin{equation}
+ Cb = -0.1687R - 0.3313G + 0.5000B
+\end{equation}
+\begin{equation}
+ Cr = 0.5000R - 0.4187G - 0.0813B
+\end{equation}
 
-$Cb = -0.1687R - 0.3313G + 0.5000B$
-
-$Cr = 0.5000R - 0.4187G - 0.0813B$
 
 The mean values of chrominance components are used to extract the skin color of the hand by dropping the luminance component because the variation in skin color is more in intensity than in chrominance. In YCbCr color space, the components Cb and Cr represent the chrominance and component Y accounts for the luminance.
 
 In the earlier works, the YCbCr color model has been used by a basic mathematic operation of thresholding on chromaticity and luminance values. No method has yet been settled which determines the thresholding accurately.So, alternatively, we use a modified approach called a skin likelihood model for skin segmentation.
 
-This model is designed from the maximum likelihood criterion, which has the parameters: mean vector and covariance matrix that maximizes the likelihood function. The Gaussian likelihood function[5] has single maxima, and the parameters mean vector ($\mu$) and covariance matrix ($\Sigma$) can be computed as:
+This model is designed from the maximum likelihood criterion, which has the parameters: mean vector and covariance matrix that maximizes the likelihood function. The Gaussian likelihood function[5] has single maxima, and the parameters mean vector ($\Upsilon$) and covariance matrix ($\xi$) can be computed as:
 
 \begin{equation}
 \begin{aligned}
-\mu_i = \frac{1}{n} & \sum_{k=1}^\infty x_k
+\Upsilon_i = \frac{1}{n} & \sum_{k=1}^\infty y_k
 \end{aligned}
 \end{equation}
 Where i $\in$ \{Cb,Cr\}  Cb and Cr are the values of chrominance in YCbCr color space.
 \begin{equation}
 \begin{aligned}
-\Sigma = \frac{1}{n} & \sum_{k=1}^\infty \left(x_k - \mu \right)\left(x_k - \mu \right)^T
+\xi = \frac{1}{n} & \sum_{k=1}^\infty \left(y_k - \Upsilon \right)\left(y_k - \Upsilon \right)^T
 \end{aligned}
 \end{equation}
 The probability distribution of skin class can be written as:
 \begin{equation}
 \begin{aligned}
-p(\frac{x}{skin}) =  g(x,\mu,\Sigma)
+p(\frac{y}{skin}) =  g(y,\Upsilon,\xi)
 \end{aligned}
 \end{equation}
 
 \begin{equation}
 \begin{aligned}
-g(x,\mu,\Sigma) =  \frac{1}{(2\pi)^{\frac{d}{2}}\left(det\left(\Sigma \right)\right)^\frac{1}{2}} \times exp(-\frac{1}{2}\delta^2)
+g(y,\Upsilon,\xi) =  \frac{1}{(2\pi)^{\frac{d}{2}}\left(det\left(\xi \right)\right)^\frac{1}{2}} \times exp(-\frac{1}{2}\delta^2)
 \end{aligned}
 \end{equation}
 
 Where d is the dimension of the feature vector, and \linebreak
-$\delta^2 =(x - \mu_i)\Sigma^{-1}(x - \mu_i)^T $ .From equation 4, the pixels can be classified as skin and non-skin color pixels by using the decision boundary. The probability density distribution of the formed Gaussian model is represented in figure:
+$\delta^2 =(y - \Upsilon_i)\xi^{-1}(y - \Upsilon_i)^T $ .From equation 4, the pixels can be classified as skin and non-skin color pixels by using the decision boundary. The probability density distribution of the formed Gaussian model is represented in figure:
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width = 6.5cm, height = 5cm]{skincolor}
@@ -465,13 +461,13 @@ $train skin model : $
 
 $function\_outputs[ mean(cr) ,mean(cb), cov(cr,cb)]$
 
-$x = [(cr-rmean);(cb-bmean)];$
+$x = [(cr-r_{mean});(cb-b_{mean})];$
 
-$likely\_skin(i,j) = [power(2*pi*power(det(rbcov),0.5),-1)]*exp(-0.5* x'*inv(rbcov)* x);$
+$likely\_skin(i,j) = [power(2*pi*power(det(rbcov),0.5),-1)]*exp(-0.5* y'*inv(rbcov)* y);$
 
 For every pixel we calculate :
 
-$likely\_skin(i,j) = [power(2*pi*power(det(rbcov),0.5),-1)]*exp(-0.5* x'*inv(rbcov)* x);$ \%This gives the Gaussian of the image. 
+$likely\_skin(i,j) = [power(2*pi*power(det(rbcov),0.5),-1)]*exp(-0.5* y'*inv(rbcov)* y);$ \%This gives the Gaussian of the image. 
 
 $BW = im2bw(likely_skin,thresh); $ \%Morphological operations for segmenting the hand shape accurately
 
@@ -504,35 +500,35 @@ Mathematically, the main morphological operations we use are denoted as follows:
 
 \paragraph{EROSION}
 \[
-    \left(A \ominus B\right) = \left[z|(B)_z\subseteq A \right]\,
+    \left(J \ominus K\right) = \left[z|(K)_z\subseteq J \right]\,
 \]
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width = 7cm, height = 4cm]{erosion}
-	%\caption{Gaussian curve of variations in Fig.1}
-\end{figure}
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[width = 7cm, height = 4cm]{erosion}
+%	%\caption{Gaussian curve of variations in Fig.1}
+%\end{figure}
 
 \paragraph{DILATION}
 \[
-    \left(A \oplus B\right) =  \left[z|(\widehat{B})_z\cap A \neq \phi \right]\,
+    \left(J \oplus K\right) =  \left[z|(\widehat{K})_z\cap J \neq \phi \right]\,
 \]
 
 imopen:
 
 \[
-    \left(A \hspace{2mm} o\hspace{2mm} B\right) =  \left[\left(A \ominus B \right) \oplus B \right]\,
+    \left(J \hspace{2mm} o\hspace{2mm} K\right) =  \left[\left(J \ominus K \right) \oplus K \right]\,
 \]
 
 imclose:
 \[
-    \left(A  \cdot  B\right) =  \left[\left(A \oplus B \right) \ominus B \right]\,
+    \left(J  \cdot  K\right) =  \left[\left(J \oplus K \right) \ominus K \right]\,
 \]
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width = 7cm, height = 4cm]{dilation}
-	%\caption{Gaussian curve of variations in Fig.1}
-\end{figure}
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[width = 7cm, height = 4cm]{dilation}
+%	%\caption{Gaussian curve of variations in Fig.1}
+%\end{figure}
 
 \subsubsection{OPERATIONS}
 The palm width calculation is needed for obtaining the finger width[7].
@@ -810,14 +806,34 @@ Our Method-2 & 90.13\% \\ \hline
 \end{table}
 
 
-\section{Conclusion}
-This paper deals with two algorithms in order to recognize the hand gestures and also compares their efficiencies with each other as well as established methods[13]. In our work, the geometry of the hand has been used for the recognition of hand gesture. It is a traditional type of algorithm and is thus robust.The proposed methods do not require any training phase[14] to identify the hand gestures so is better than neural networks. Sign Language Recognition, Robot Control automation of home appliances and presentation control are few of many applications of hand gesture recognition systems. Usage of hand gestures can be extended to control real time applications like VLC media player, paint, pdf reader etc. This wireless control of embedded instruments is a great progress towards the field of embedded vision and automation.\cite{1199054}
+\section{Conclusion and Futuure Scope}
+This paper deals with two algorithms in order to recognize the hand gestures and also compares their efficiencies with each other as well as established methods[13]. In our work, the geometry of the hand has been used for the recognition of hand gesture. It is a traditional type of algorithm and is thus robust.The proposed methods do not require any training phase[14] to identify the hand gestures so is better than neural networks. 
+
+FUTURE SCOPE:
+
+Three dimensional hand model based approaches[18] are gaining interest in the field of Gesture Recognition.
+
+
+
+The polpular gesture sensors used presesntly are:
+
+A. Time-of-Flight Sensors:
+ToF-based 3D hand gesture recognition system uses point gestures to control a robot [15].
+
+B. Kinect
+
+ 1) skeletonbased recognition[16] and 
+ 
+ 2) depth-based recognition.
+
+C. Leap Motion : Leap motion is a newly released sensor that focuses on the accurate 3D hand positioning. It focuses on a specific area and has gained popularity over Kinect sensor in terms of better accuracy[17].
+
 
 % conference papers do not normally have an appendix
 
 
-\bibliography{refrences} 
-
+\bibliography{refrences}{}
+\bibliographystyle{plain}
 \begin{thebibliography}{1}
 
 \bibitem{IEEEhowto:1199054}
@@ -873,6 +889,24 @@ Rafiqul Zaman Khan and Noor Adnan Ibraheem, \emph{"Hand Gesture Recognition:   A
 \bibitem{IEEEhowto:Vishwakarma}
 D.K.~Vishwakarma, Pridarshani and  Kuldeep Singh,  \emph{"A framework for the recognition of hand gesture in static postures"},in IEEE Conf. on Computing Communication and Automation, Greater Noida, UP, 2016, pp. 294-298. DOI:10.1109/CCAA.2016.7813732.
 
+\bibitem{IEEEhowto:Droeschel}
+D. Droeschel, J. Stückler, and S. Behnke,  \emph{"Learning to interpret
+pointing gestures with a time-of-flight camera"},in Proc. Int. Conf.
+Human-Robot Interact., Mar. 2011, pp. 481–488.
+
+\bibitem{IEEEhowto:Shotton}
+J. Shotton et al.,  \emph{"Real-time human pose recognition in parts from
+single depth images"},in Proc. IEEE CVPR, Jun. 2011, pp. 1297–1304.
+
+\bibitem{IEEEhowto:Regenbrecht}
+H. Regenbrecht, J. Collins, and S. Hoermann,  \emph{"A leap-supported,
+hybrid AR interface approach"},in Proc. Austral. Comput.-Human
+Interact. Conf., 2013, pp. 281–284
+
+\bibitem{IEEEhowto:Cheng}
+Hong Cheng, Senior Member, IEEE, Lu Yang, Member, IEEE, and Zicheng Liu, Fellow, IEEE,  \emph{"Survey on 3D Hand Gesture Recognition"}
+
+REFERENCE:
 
 
 
