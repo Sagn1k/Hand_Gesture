@@ -2,6 +2,7 @@
 \usepackage{graphicx}
 \usepackage{mathtools}
 \graphicspath{ {images/}}
+\bibliographystyle{plain}
 % Some Computer Society conferences also require the compsoc mode option,
 % but others use the standard conference format.
 %
@@ -276,12 +277,32 @@
 % author names and affiliations
 % use a multiple column layout for up to three different
 % affiliations
-\author{\IEEEauthorblockN{Sahib Majithia\IEEEauthorrefmark{1} and Nikhil Kumar Mishra\IEEEauthorrefmark{2}}
-\IEEEauthorblockA{Department of Electronics and Communications,
+
+
+\author{\IEEEauthorblockN{Michael Shell}
+\IEEEauthorblockA{School of Electrical and\\Computer Engineering\\
+Georgia Institute of Technology\\
+Atlanta, Georgia 30332--0250\\
+Email: http://www.michaelshell.org/contact.html}
+\and
+\IEEEauthorblockN{Homer Simpson}
+\IEEEauthorblockA{Twentieth Century Fox\\
+Springfield, USA\\
+Email: homer@thesimpsons.com}
+\and
+\IEEEauthorblockN{James Kirk\\ and Montgomery Scott}
+\IEEEauthorblockA{Starfleet Academy\\
+San Francisco, California 96678--2391\\
+Telephone: (800) 555--1212\\
+Fax: (888) 555--1212}}
+
+
+\author{\IEEEauthorblockN{D.K. Vishwakarma\IEEEauthorrefmark{1}  Sahib Majithia\IEEEauthorrefmark{2} Nikhil Kumar Mishra\IEEEauthorrefmark{3}}
+\IEEEauthorblockA{Department of Electronics and Communication Engineering,
 \\Delhi Technological University\\
 New Delhi, India\\
-Email: \IEEEauthorrefmark{1}sahibmajithia@gmail.com,
-\IEEEauthorrefmark{2}nkmishra1997@gmail.com}}
+Email: \IEEEauthorrefmark{1}dvishwakarma@gmail.com ,\IEEEauthorrefmark{2}sahibmajithia@gmail.com,
+\IEEEauthorrefmark{3}nkmishra1997@gmail.com}}
 
 % conference papers do not typically use \thanks and this command
 % is locked out in conference mode. If really needed, such as for
@@ -560,11 +581,29 @@ Gy: forward vertical difference
 \]
 
 We use sobel gradient operator for our method.
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width = 8cm, height = 3cm]{method2_1}
-	%\caption{Gaussian curve of variations in Fig.1}
-\end{figure}
+\begin{table}
+\parbox{.45\linewidth}{
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+-1&0&+1\\ \hline
+-2&0&+2\\ \hline
+-1&0&+1\\ \hline
+\end{tabular}
+\caption{Gx}
+}
+\hfill
+\parbox{.45\linewidth}{
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
++1&+2&+1\\ \hline
+0&0&0\\ \hline
+-1&-2&-1\\ \hline
+\end{tabular}
+\caption{Gy}
+}
+\end{table}
 
 Gradient map of the obtained image is calculated. The geometry of the hand infers that the wrist area has a small change of slope at the boundary region though the change is high for the fingertips.
 
@@ -576,10 +615,21 @@ The final gradient map is a plot for column locations, and thresholding identifi
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width = 6cm, height = 8cm]{method2_2}
+	\includegraphics[width = 8cm, height = 3cm]{fin5m2}
 	%\caption{Gaussian curve of variations in Fig.1}
 \end{figure}
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = 8cm, height = 3cm]{fin4m2}
+	%\caption{Gaussian curve of variations in Fig.1}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width = 8cm, height = 3cm]{fin2m2}
+	%\caption{Gaussian curve of variations in Fig.1}
+\end{figure}
 
 \subsubsection{PSEUDO CODE}
 METHOD 2
@@ -613,83 +663,169 @@ We applied our algorithms on standard Massey University database [10] of images 
 Accuracy by Method 1: - 93.622%
 
 Accuracy by Method 2: - 90.136%
+%
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[width = 8cm, height = 3cm]{cof1_1}
+%	\caption{Confusion Matrix of Method 1}
+%\end{figure}
+%
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[width = 8cm, height = 3cm]{cof1_2}
+%	\caption{Confusion Matrix of Method 2}
+%\end{figure}
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width = 8cm, height = 3cm]{cof1_1}
-	\caption{Confusion Matrix of Method 1}
-\end{figure}
+\begin{table}[h]
+\caption{Confusion Matrix of Method 1}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{1}{|c|}{Finger}
+& \multicolumn{1}{|c|}{1}
+& \multicolumn{1}{|c|}{2}
+& \multicolumn{1}{|c|}{3}
+& \multicolumn{1}{|c|}{4}
+& \multicolumn{1}{|c|}{5}\\
+Count &  &  &  &  &\\ \hline
+1  &  92.75\%  &  7.25\%  & 0\%  & 0\% & 0\%\\ \hline
+2  &  0\%  &  100\%  & 0\%  & 0\% & 0\%\\ \hline
+3  &  0\%  &  0\%  & 92\%  & 8\% & 0\%\\ \hline
+4  &  0\%  &  0\%  & 1.4\%  & 97.2\% & 1.4\%\\ \hline
+5  &  0\%  &  0\%  & 0\%  & 9.23\% & 86.16\%\\ \hline
+\end{tabular}
+\label{table-tab2}
+\end{center}
+\end{table}
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width = 8cm, height = 3cm]{cof1_2}
-	\caption{Confusion Matrix of Method 2}
-\end{figure}
-
+\begin{table}[h]
+\caption{Confusion Matrix of Method 2}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{1}{|c|}{Finger}
+& \multicolumn{1}{|c|}{1}
+& \multicolumn{1}{|c|}{2}
+& \multicolumn{1}{|c|}{3}
+& \multicolumn{1}{|c|}{4}
+& \multicolumn{1}{|c|}{5}\\
+Count &  &  &  &  &\\ \hline
+1  &  88.4\%  &  11.6\%  & 0\%  & 0\% & 0\%\\ \hline
+2  &  1.43\%  &  94.29\%  & 4.28\%  & 0\% & 0\%\\ \hline
+3  &  1.33\%  &  12\%  & 85.34\%  & 1.33\% & 0\%\\ \hline
+4  &  1.4\%  &  1.4\%  & 7\%  & 88.8\% & 1.4\%\\ \hline
+5  &  0\%  &  0\%  & 0\%  & 6.15\% & 93.85\%\\ \hline
+\end{tabular}
+\label{table-tab2}
+\end{center}
+\end{table}
 
 \subsection{OUR DATA-SET}
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width = 8cm, height = 3cm]{ourdataset}
+	\includegraphics[width = 8.5cm, height = 4cm]{ourdataset}
 	%\caption{Gaussian curve of variations in Fig.1}
 \end{figure}
 
-To have an understanding of real time results, we collect our own database of images and further test the accuracy.
+To have an understanding of real time results, we collect our own database of images and further test the accuracy. We collected hand gestures of different Indian persons.
 
-Accuracy by Method 1: - 96%
+Accuracy by Method 1 : - 96%
 
-Accuracy by Method 2: - 98%
+Accuracy by Method 2 : - 98%
 
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width = 8cm, height = 3cm]{cof2_1}
-	\caption{Confusion Matrix of Method 1}
-\end{figure}
-
-
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width = 8cm, height = 3cm]{cof2_2}
-	\caption{Confusion Matrix of Method 2}
-\end{figure}
-
-
-
+\begin{table}[h!]
+\caption{Confusion Matrix of Method 1}
 \begin{center}
- \begin{tabular}{||c c||} 
- \hline
- Method for feature extraction + classifier & Accuracy  \\ [0.5ex] 
- \hline\hline
- Bayes classifier[11] & 83.40\%  \\ 
- \hline
- PCA & 72.73\% \\
- \hline
- Kumar's Autoencoders[12] & 83.36\% \\
- \hline
- Our Method-1 & 93.62\% \\
- \hline
- Our Method-2 & 90.13\% \\ [1ex] 
- \hline
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{1}{|c|}{Finger}
+& \multicolumn{1}{|c|}{1}
+& \multicolumn{1}{|c|}{2}
+& \multicolumn{1}{|c|}{3}
+& \multicolumn{1}{|c|}{4}
+& \multicolumn{1}{|c|}{5}\\
+Count &  &  &  &  &\\ \hline
+1  &  100\%  &  0\%  & 0\%  & 0\% & 0\%\\ \hline
+2  &  0\%  &  90\%  & 10\%  & 0\% & 0\%\\ \hline
+3  &  0\%  &  0\%  & 100\%  & 0\% & 0\%\\ \hline
+4  &  0\%  &  0\%  & 0\%  & 100\% & 0\%\\ \hline
+5  &  0\%  &  0\%  & 0\%  & 30\% & 70\%\\ \hline
 \end{tabular}
+\label{table-tab2}
 \end{center}
+\end{table}
 
+\begin{table}[h!]
+\caption{Confusion Matrix of Method 2}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{1}{|c|}{Finger}
+& \multicolumn{1}{|c|}{1}
+& \multicolumn{1}{|c|}{2}
+& \multicolumn{1}{|c|}{3}
+& \multicolumn{1}{|c|}{4}
+& \multicolumn{1}{|c|}{5}\\
+Count &  &  &  &  &\\ \hline
+1  &  100\%  &  0\%  & 0\%  & 0\% & 0\%\\ \hline
+2  &  0\%  &  100\%  & 0\%  & 0\% & 0\%\\ \hline
+3  &  0\%  &  0\%  & 100\%  & 0\% & 0\%\\ \hline
+4  &  0\%  &  0\%  & 0\%  & 100\% & 0\%\\ \hline
+5  &  0\%  &  0\%  & 0\%  & 30\% & 70\%\\ \hline
+\end{tabular}
+\label{table-tab2}
+\end{center}
+\end{table}
+
+
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[width = 8cm, height = 3cm]{cof2_1}
+%	\caption{Confusion Matrix of Method 1}
+%\end{figure}
+%
+%
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[width = 8cm, height = 3cm]{cof2_2}
+%	\caption{Confusion Matrix of Method 2}
+%\end{figure}
+%
+
+\begin{table}[h!]
+\caption{Comparison of various methods}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{1}{|c|}{Method for feature extraction + classifier}
+& \multicolumn{1}{|c|}{Accuracy}\\
+Bayes classifier[11] & 83.40\% \\ \hline
+PCA & 72.73\% \\ \hline
+Kumar's Autoencoders[12] & 83.36\% \\ \hline
+Our Method-1 & 93.62\% \\ \hline
+Our Method-2 & 90.13\% \\ \hline
+\end{tabular}
+\label{table-tab2}
+\end{center}
+\end{table}
 
 
 \section{Conclusion}
-This paper deals with two algorithms in order to recognize the hand gestures and also compares their efficiencies with each other as well as established methods[13]. In our work, the geometry of the hand has been used for the recognition of hand gesture. It is a traditional type of algorithm and is thus robust.The proposed methods do not require any training phase[14] to identify the hand gestures so is better than neural networks. Sign Language Recognition, Robot Control automation of home appliances and presentation control are few of many applications of hand gesture recognition systems. Usage of hand gestures can be extended to control real time applications like VLC media player, paint, pdf reader etc. This wireless control of embedded instruments is a great progress towards the field of embedded vision and automation
+This paper deals with two algorithms in order to recognize the hand gestures and also compares their efficiencies with each other as well as established methods[13]. In our work, the geometry of the hand has been used for the recognition of hand gesture. It is a traditional type of algorithm and is thus robust.The proposed methods do not require any training phase[14] to identify the hand gestures so is better than neural networks. Sign Language Recognition, Robot Control automation of home appliances and presentation control are few of many applications of hand gesture recognition systems. Usage of hand gestures can be extended to control real time applications like VLC media player, paint, pdf reader etc. This wireless control of embedded instruments is a great progress towards the field of embedded vision and automation.\cite{1199054}
 
 % conference papers do not normally have an appendix
 
 
+\bibliography{refrences} 
+
 \begin{thebibliography}{1}
 
-\bibitem{IEEEhowto:Wysoski}
+\bibitem{IEEEhowto:1199054}
 Simei G. Wysoski, Marcus V. Lamar, Susumu Kuroyanagi, Akira Iwata, (2002)\emph{"A Rotation
 Invariant Approach On Static-Gesture Recognition Using Boundary Histograms And Neural Networks"}, IEEE Proceedings of the 9th International Conference on Neural Information
 Processing, Singapura.
 
-\bibitem{IEEEhowto:Kouichi}
+\bibitem{IEEEhowto:Murakami:1991:GRU:108844.108900}
 Kouichi M., Hitomi T. (1999) \emph{"Gesture Recognition using Recurrent Neural Networks"}, ACM
 conference on Human factors in computing systems: Reaching through technology (CHI '91), pp.
 237-242. doi: 10.1145/108844.108900
