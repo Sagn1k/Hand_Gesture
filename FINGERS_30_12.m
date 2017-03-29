@@ -4,7 +4,7 @@ function [a2,width]=FINGERS(image,rmean,bmean,rbcov)
 img=imread(image);
 img=imresize(img,[200,200]);
 figure,subplot(2,2,1);imshow(img),title('RGB IMAGE');
-%RGB=double(img);
+RGB=double(img);
 %skin detection:
 %%
 %mask for skin segmentation:
