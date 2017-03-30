@@ -3,6 +3,9 @@
 \usepackage[noadjust]{cite}
 \usepackage{graphicx}
 \usepackage{mathtools}
+\usepackage{subfig}
+\usepackage{dcolumn}
+\usepackage{booktabs}
 \usepackage[table]{xcolor}
 \graphicspath{ {images/}}
 
@@ -490,10 +493,10 @@ Gesture recognition aims at recognizing meaningful expressions of motion by huma
 
 
 \section{Introduction}
-In the present day framework of interactive, intelligent computing, an efficient human–computer interaction is assuming utmost importance in our daily lives. Gesture recognition can be termed as an approach in this direction.
+In the present day framework of interactive, intelligent computing, an efficient human computer interaction is assuming utmost importance in our daily lives. Gesture recognition can be termed as an approach in this direction.
 Gesture recognition is the mathematical interpretation of a human motion by a computing device
 
- There are methods which used additional hardware devices such as data glove devices and color markers to easily extract a comprehensive description of gesture features for recognition\cite{1199054} . Neural Network classifier has been applied for gestures classification \cite{Murakami:1991:GRU:108844.108900} but it is time consuming and when the number of training data increases, the time needed for classification are increased too .Orientation histogram method \cite{freeman1995orientation} has some problems which are; different gestures could have similar orientation histograms, and similar gestures might have different orientation histograms. Other methods based on the appearance of the hand use skin color to segment the hand and extract necessary features, these methods are considered easy, natural and less computationally costly compared with methods mentioned before \cite{1199054} .
+ There are methods which used additional hardware devices such as data glove devices and color markers to easily extract a comprehensive description of gesture features for recognition \cite{1199054} . Neural Network classifier has been applied for gestures classification \cite{Murakami:1991:GRU:108844.108900} but it is time consuming and when the number of training data increases, the time needed for classification are increased too .Orientation histogram method \cite{freeman1995orientation} has some problems which are; different gestures could have similar orientation histograms, and similar gestures might have different orientation histograms. Other methods based on the appearance of the hand use skin color to segment the hand and extract necessary features, these methods are considered easy, natural and less computationally costly compared with methods mentioned before \cite{1199054} .
 
 Sign Language Recognition, Robot Control automation of home appliances and presentation control are few of many applications of hand gesture recognition systems. Usage of hand gestures can be extended to control real time applications like VLC media player, paint, pdf reader etc. This wireless control of embedded instruments is a great progress towards the field of embedded vision and automation.
 
@@ -511,7 +514,7 @@ In this paper section 2 and 3 describe the algorithms proposed. Further sections
 
 \section{Hand Segmentation}
 
-Skin segmentation obtains the hand region. The skin segmentation has been applied correctly to Region of Interest of hand region. This does not cause susceptibility as the Region of Interest can be easily extracted by different depth estimation strategies[!4], which include:
+Skin segmentation obtains the hand region. The skin segmentation has been applied correctly to Region of Interest of hand region. This does not cause susceptibility as the Region of Interest can be easily extracted by different depth estimation strategies, which include:
 
 Active methods:
 Light-based depth estimation/Pattern projection/Ultrasounds based methods
@@ -521,10 +524,16 @@ Monocular depth estimation/Image structure/Points tracking or Optical flow/ Mult
 
 The Region of interest can also be extracted by using instruments like Kinect which uses an RGB camera with a depth sensor.
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width = 8cm, height = 2.8cm]{StandardDataset}
-	\caption{GESTURES USED WITH EXTRACTED ROI}
+We have used gestures G1, G2, G3, G4 and G5.
+\begin{figure}[!h]
+\begin{tabular}{ccccc}
+\subfloat[G1]{\includegraphics[width = 0.55in]{ges1}} &
+\subfloat[G2]{\includegraphics[width = 0.55in]{ges2}} &
+\subfloat[G3]{\includegraphics[width = 0.55in]{ges3}} &
+\subfloat[G4]{\includegraphics[width = 0.55in]{ges4}} &
+\subfloat[G5]{\includegraphics[width = 0.55in]{ges5}}
+\end{tabular}
+\caption{Gestures used with extracted ROI}
 \end{figure}
 
 \subsection{SKIN SEGMENTATION}
@@ -549,7 +558,7 @@ The mean values of chrominance components are used to extract the skin color of 
 
 In the earlier works, the YCbCr color model has been used by a basic mathematic operation of thresholding on chromaticity and luminance values. No method has yet been settled which determines the thresholding accurately.So, alternatively, we use a modified approach called a skin likelihood model for skin segmentation.
 
-This model is designed from the maximum likelihood criterion, which has the parameters: mean vector and covariance matrix that maximizes the likelihood function. The Gaussian likelihood function\cite{vishwakarma2015efficient} has single maxima, and the parameters mean vector ($\Upsilon$) and covariance matrix ($\xi$) can be computed as:
+This model is designed from the maximum likelihood criterion, which has the parameters: mean vector and covariance matrix that maximizes the likelihood function. The Gaussian likelihood function \cite{vishwakarma2015efficient} has single maxima, and the parameters mean vector ($\Upsilon$) and covariance matrix ($\xi$) can be computed as:
 
 \begin{equation}
 \begin{aligned}
@@ -631,16 +640,19 @@ After acquiring a binary image of the segmented skin region, we extract the coun
 
 \subsubsection{MORPHOLOGY}
 
-Morphology[!6] is an extensive collection of image processing procedures that process images based on shapes.
+Morphology is an extensive collection of image processing procedures that process images based on shapes.
 
  Dilation and Erosion work (at least conceptually) by translating the structuring element to several points in the input image, and analyzing the overlap between the translated kernel coordinates and the input image coordinates. For example, in the case of erosion, the output coordinate set consists of just those points to which the origin of the structuring element can be translated, while the element still remains entirely `within' the input image.
 
 Mathematically, the main morphological operations we use are denoted as follows:
 
 \paragraph{EROSION}
-\[
-    \left(J \ominus K\right) = \left[z|(K)_z\subseteq J \right]\,
-\]
+\begin{equation}
+\begin{aligned}
+\left(J \ominus K\right) = \left[z|(K)_z\subseteq J \right]\,
+\end{aligned}
+\end{equation}
+
 %\begin{figure}[h!]
 %	\centering
 %	\includegraphics[width = 7cm, height = 4cm]{erosion}
@@ -648,20 +660,25 @@ Mathematically, the main morphological operations we use are denoted as follows:
 %\end{figure}
 
 \paragraph{DILATION}
-\[
-    \left(J \oplus K\right) =  \left[z|(\widehat{K})_z\cap J \neq \phi \right]\,
-\]
+\begin{equation}
+\begin{aligned}
+\left(J \oplus K\right) =  \left[z|(\widehat{K})_z\cap J \neq \phi \right]\,
+\end{aligned}
+\end{equation}
 
 imopen:
-
-\[
-    \left(J \hspace{2mm} o\hspace{2mm} K\right) =  \left[\left(J \ominus K \right) \oplus K \right]\,
-\]
+\begin{equation}
+\begin{aligned}
+\left(J \hspace{2mm} o\hspace{2mm} K\right) =  \left[\left(J \ominus K \right) \oplus K \right]\,
+\end{aligned}
+\end{equation}
 
 imclose:
-\[
-    \left(J  \cdot  K\right) =  \left[\left(J \oplus K \right) \ominus K \right]\,
-\]
+\begin{equation}
+\begin{aligned}
+\left(J  \cdot  K\right) =  \left[\left(J \oplus K \right) \ominus K \right]\,
+\end{aligned}
+\end{equation}
 
 %\begin{figure}[h!]
 %	\centering
@@ -670,7 +687,7 @@ imclose:
 %\end{figure}
 
 \subsubsection{OPERATIONS}
-The palm width calculation is needed for obtaining the finger width[!7].
+The palm width calculation is needed for obtaining the finger width.
 
 The finger width lies between 1/3 to 1/4 times the palm width depending on the stretch of fingers.
 
@@ -678,12 +695,12 @@ An erosion filter is then designed which is of the dimension of the finger girth
 
 Morphological opening, closing, and other fitting operations should be executed to accomplish a noise-free and an explicitly shaped mask.
 
-The subtraction of the mask\cite{7279962} from the binary image provides us the active fingers of the image. Further thresholding for the area of the acquired portions presents us with the precise count of active fingers.
+The subtraction of the mask \cite{7279962} from the binary image provides us the active fingers of the image. Further thresholding for the area of the acquired portions presents us with the precise count of active fingers.
 
 
 \subsubsection{PSEUDO CODE}
 
-METHOD 1 
+\textbf{Masking Approach}
 
  3 \textless ratio \textless 4 
 
@@ -703,7 +720,7 @@ $regionprops \rightarrow$ Area threshholding to count the no. of bounding box to
 
 \subsection{Method 2: GRADIENT APPROACH}
 After acquiring a binary image of the segmented skin region, we extract the count of active fingers by using the information of change of gradients at the finger-tip region.
-Once the centroid of the binary image is obtained, the shortest distance of the boundary of the silhouette from this centroid point is determined. This minimum distance is determined in all directions from the centroid and the area thus formed depicts the mask for the binary silhouette. This area usually comprises the palm region of the hand and hence forms the base of the mask\cite{6481804}. Mask subtraction then gives us the fingertip section in addition to the wrist area.
+Once the centroid of the binary image is obtained, the shortest distance of the boundary of the silhouette from this centroid point is determined. This minimum distance is determined in all directions from the centroid and the area thus formed depicts the mask for the binary silhouette. This area usually comprises the palm region of the hand and hence forms the base of the mask \cite{6481804}. Mask subtraction then gives us the fingertip section in addition to the wrist area.
 
 Gradients are calculated by using filters :
 
@@ -711,34 +728,31 @@ Gx: forward horizontal difference
 
 Gy: forward vertical difference
 
-\[
-     Gradient = \sqrt{G_x^2 + G_y^2} 
-\]
+\begin{equation}
+\begin{aligned}
+Gradient = \sqrt{G_x^2 + G_y^2}
+\end{aligned}
+\end{equation}
+
 
 We use sobel gradient operator for our method.
-\begin{table}
-\parbox{.45\linewidth}{
-\centering
-\begin{tabular}{|c|c|c|}
-\hline
--1&0&+1\\ \hline
--2&0&+2\\ \hline
--1&0&+1\\ \hline
-\end{tabular}
-\caption{Gx}
-}
-\hfill
-\parbox{.45\linewidth}{
-\centering
-\begin{tabular}{|c|c|c|}
-\hline
-+1&+2&+1\\ \hline
-0&0&0\\ \hline
--1&-2&-1\\ \hline
-\end{tabular}
-\caption{Gy}
-}
-\end{table}
+\[
+  \stackrel{\mbox{$G$x}}{%
+    \begin{bmatrix}
+    -1 & 0 & +1 \\
+    -2 & 0 & +2 \\
+    -1 & 0 & +1
+    \end{bmatrix}%
+  }\ \quad
+  \stackrel{\mbox{$G$y}}{%
+    \begin{bmatrix}
+    -1 & +2 & +1 \\
+    0 & 0 & 0 \\
+    -1 & -2 & -1
+    \end{bmatrix}%
+  }
+\]
+
 
 Gradient map of the obtained image is calculated. The geometry of the hand infers that the wrist area has a small change of slope at the boundary region though the change is high for the fingertips.
 
@@ -748,26 +762,32 @@ The gradient map is passed through a low-pass filter to remove the noise effects
 
 The final gradient map is a plot for column locations, and thresholding identifies the count of fingers.
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width = 8cm, height = 3cm]{fin5m2}
-	%\caption{Gaussian curve of variations in Fig.1}
+\begin{figure}[!h]
+\begin{tabular}{cc}
+\subfloat{\includegraphics[width = 0.9in]{method2_5}} &
+\subfloat{\includegraphics[width = 1.6in]{plot5}}
+\end{tabular}
+%\caption{Gestures used with extracted ROI}
 \end{figure}
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width = 8cm, height = 3cm]{fin4m2}
-	%\caption{Gaussian curve of variations in Fig.1}
+\begin{figure}[!h]
+\begin{tabular}{cc}
+\subfloat{\includegraphics[width = 0.9in]{method2_4}} &
+\subfloat{\includegraphics[width = 1.6in]{plot4}}
+\end{tabular}
+%\caption{Gestures used with extracted ROI}
 \end{figure}
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width = 8cm, height = 3cm]{fin2m2}
-	%\caption{Gaussian curve of variations in Fig.1}
+\begin{figure}[!h]
+\begin{tabular}{cc}
+\subfloat{\includegraphics[width = 0.9in]{method2_2}} &
+\subfloat{\includegraphics[width = 1.6in]{plot2}}
+\end{tabular}
+%\caption{Gestures used with extracted ROI}
 \end{figure}
 
 \subsubsection{PSEUDO CODE}
-METHOD 2
+\textbf{Gradient Approach}
 
 $erode\_filter= strel('disk',5);$ \% remove small components such as noises and uneroded finger parts
  
@@ -788,16 +808,21 @@ The rule-based classifiers learned model is represented as a set of if-then rule
 Accuracy is then given by $(c/t)*100$.
 
 \subsection{STANDARD DATA-SET}
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width = 8cm, height = 3cm]{StandardDataset1}
-	%\caption{Gaussian curve of variations in Fig.1}
+\begin{figure}[!h]
+\begin{tabular}{ccccc}
+\subfloat[G1]{\includegraphics[width = 0.55in]{ges1}} &
+\subfloat[G2]{\includegraphics[width = 0.55in]{ges2}} &
+\subfloat[G3]{\includegraphics[width = 0.55in]{ges3}} &
+\subfloat[G4]{\includegraphics[width = 0.55in]{ges4}} &
+\subfloat[G5]{\includegraphics[width = 0.55in]{ges5}}
+\end{tabular}
+\caption{Hand Gestures used from Standard Database}
 \end{figure}
 We applied our algorithms on standard Massey University database \cite{barczak2011new} of images available online.We used only 5 hand gestures from the data-set
 
-Accuracy by Method 1: - 93.622%
+Accuracy by Method 1: - 93.622\%
 
-Accuracy by Method 2: - 90.136%
+Accuracy by Method 2: - 90.136\%
 %
 %\begin{figure}[h!]
 %	\centering
@@ -813,108 +838,93 @@ Accuracy by Method 2: - 90.136%
 
 %colour
 %\cellcolor{green}
-
-
-\begin{table}[h]
-\caption{Confusion Matrix of Method 1}
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|c|c|}
-\hline
-\multicolumn{1}{|c|}{Finger}
-& \multicolumn{1}{|c|}{1}
-& \multicolumn{1}{|c|}{2}
-& \multicolumn{1}{|c|}{3}
-& \multicolumn{1}{|c|}{4}
-& \multicolumn{1}{|c|}{5}\\
-Count &  &  &  &  &\\ \hline
-1  &  92.75\%  &  7.25\%  & 0\%  & 0\% & 0\%\\ \hline
-2  &  0\%  &  100\%  & 0\%  & 0\% & 0\%\\ \hline
-3  &  0\%  &  0\%  & 92\%  & 8\% & 0\%\\ \hline
-4  &  0\%  &  0\%  & 1.4\%  & 97.2\% & 1.4\%\\ \hline
-5  &  0\%  &  0\%  & 0\%  & 9.23\% & 86.16\%\\ \hline
+\begin{table}[!h]
+\caption{Confusion Matrix for Masking Approach}  
+\begin{tabular}{ l *{5}{D{.}{.}{4}} }
+\toprule
+ & \multicolumn{5}{c}{\textbf{Predicted Class}} \\
+\cmidrule(lr){2-6}
+\textbf{Actual Class} & \multicolumn{1}{c}{G1} & \multicolumn{1}{c}{G2} & \multicolumn{1}{c}{G3} & \multicolumn{1}{c}{G4} & \multicolumn{1}{c}{G5} \\
+\midrule
+\texttt{G1} &0.9275  &  0.0725  & 0  & 0 & 0\\
+\texttt{G2} &0  &  1  & 0  & 0 & 0\\ 
+\texttt{G3} &0  &  0  & 0.92  & 0.08 & 0\\
+\texttt{G4} &0  &  0  & 0.014  & 0.972 & 0.014\\
+\texttt{G5} &0  &  0  & 0  & 0.0923 & 0.8616\\
+        \bottomrule             
 \end{tabular}
-\label{table-tab2}
-\end{center}
 \end{table}
 
-\begin{table}[h]
-\caption{Confusion Matrix of Method 2}
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|c|c|}
-\hline
-\multicolumn{1}{|c|}{Finger}
-& \multicolumn{1}{|c|}{1}
-& \multicolumn{1}{|c|}{2}
-& \multicolumn{1}{|c|}{3}
-& \multicolumn{1}{|c|}{4}
-& \multicolumn{1}{|c|}{5}\\
-Count &  &  &  &  &\\ \hline
-1  &  88.4\%  &  11.6\%  & 0\%  & 0\% & 0\%\\ \hline
-2  &  1.43\%  &  94.29\%  & 4.28\%  & 0\% & 0\%\\ \hline
-3  &  1.33\%  &  12\%  & 85.34\%  & 1.33\% & 0\%\\ \hline
-4  &  1.4\%  &  1.4\%  & 7\%  & 88.8\% & 1.4\%\\ \hline
-5  &  0\%  &  0\%  & 0\%  & 6.15\% & 93.85\%\\ \hline
-\end{tabular}
-\label{table-tab2}
-\end{center}
-\end{table}
 
+\begin{table}[!h]
+\caption{Confusion Matrix for Gradient Approach}  
+\begin{tabular}{ l *{5}{D{.}{.}{4}} }
+\toprule
+ & \multicolumn{5}{c}{\textbf{Predicted Class}} \\
+\cmidrule(lr){2-6}
+\textbf{Actual Class} & \multicolumn{1}{c}{G1} & \multicolumn{1}{c}{G2} & \multicolumn{1}{c}{G3} & \multicolumn{1}{c}{G4} & \multicolumn{1}{c}{G5} \\
+\midrule
+\texttt{G1} &0.884  &  0.116  & 0  & 0 & 0\\
+\texttt{G2} &0.0143  &  0.9429  & 0.0428  & 0 & 0\\
+\texttt{G3} &0.0133  &  0.12  & 0.8534  & 0.0133 & 0\\
+\texttt{G4} &0.014  &  0.014  & 0.07  & 0.888 & 0.014\\
+\texttt{G5} &0  &  0  & 0  & 0.0615 & 0.9385\\
+        \bottomrule             
+\end{tabular}
+\end{table}
 \subsection{OUR DATA-SET}
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width = 8.5cm, height = 4cm]{ourdataset}
-	%\caption{Gaussian curve of variations in Fig.1}
+\begin{figure}[!h]
+\begin{tabular}{ccccc}
+\subfloat[G1]{\includegraphics[width = 0.55in]{geo1}} &
+\subfloat[G2]{\includegraphics[width = 0.55in]{geo2}} &
+\subfloat[G3]{\includegraphics[width = 0.55in]{geo3}} &
+\subfloat[G4]{\includegraphics[width = 0.55in]{geo4}} &
+\subfloat[G5]{\includegraphics[width = 0.55in]{geo5}}
+\end{tabular}
+\caption{Hand Gestures used from our created dataset}
 \end{figure}
 
 To have an understanding of real time results, we collect our own database of images and further test the accuracy. We collected hand gestures of different Indian persons.
 
-Accuracy by Method 1 : - 96%
+Accuracy by Method 1 : - 96\%
 
-Accuracy by Method 2 : - 98%
-
-\begin{table}[h!]
-\caption{Confusion Matrix of Method 1}
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|c|c|}
-\hline
-\multicolumn{1}{|c|}{Finger}
-& \multicolumn{1}{|c|}{1}
-& \multicolumn{1}{|c|}{2}
-& \multicolumn{1}{|c|}{3}
-& \multicolumn{1}{|c|}{4}
-& \multicolumn{1}{|c|}{5}\\
-Count &  &  &  &  &\\ \hline
-1  &  100\%  &  0\%  & 0\%  & 0\% & 0\%\\ \hline
-2  &  0\%  &  90\%  & 10\%  & 0\% & 0\%\\ \hline
-3  &  0\%  &  0\%  & 100\%  & 0\% & 0\%\\ \hline
-4  &  0\%  &  0\%  & 0\%  & 100\% & 0\%\\ \hline
-5  &  0\%  &  0\%  & 0\%  & 30\% & 70\%\\ \hline
-\end{tabular}
-\label{table-tab2}
-\end{center}
-\end{table}
+Accuracy by Method 2 : - 98\%
 
 \begin{table}[h!]
-\caption{Confusion Matrix of Method 2}
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|c|c|}
-\hline
-\multicolumn{1}{|c|}{Finger}
-& \multicolumn{1}{|c|}{1}
-& \multicolumn{1}{|c|}{2}
-& \multicolumn{1}{|c|}{3}
-& \multicolumn{1}{|c|}{4}
-& \multicolumn{1}{|c|}{5}\\
-Count &  &  &  &  &\\ \hline
-1  &  100\%  &  0\%  & 0\%  & 0\% & 0\%\\ \hline
-2  &  0\%  &  100\%  & 0\%  & 0\% & 0\%\\ \hline
-3  &  0\%  &  0\%  & 100\%  & 0\% & 0\%\\ \hline
-4  &  0\%  &  0\%  & 0\%  & 100\% & 0\%\\ \hline
-5  &  0\%  &  0\%  & 0\%  & 30\% & 70\%\\ \hline
+\caption{Confusion Matrix for Masking Approach}  
+\begin{tabular}{ l *{5}{D{.}{.}{4}} }
+\toprule
+ & \multicolumn{5}{c}{\textbf{Predicted Class}} \\
+\cmidrule(lr){2-6}
+\textbf{Actual Class} & \multicolumn{1}{c}{G1} & \multicolumn{1}{c}{G2} & \multicolumn{1}{c}{G3} & \multicolumn{1}{c}{G4} & \multicolumn{1}{c}{G5} \\
+\midrule
+\texttt{G1} &1  &  0  & 0  & 0 & 0\\
+\texttt{G2} &0  &  0.9  & 0.1  & 0 & 0\\ 
+\texttt{G3} &0  &  0  & 0.1  & 0 & 0\\
+\texttt{G4} &0  &  0  & 0  & 0.1 & 0\\
+\texttt{G5} &0  &  0  & 0  & 0.3 & 0.7\\
+        \bottomrule             
 \end{tabular}
-\label{table-tab2}
-\end{center}
 \end{table}
+
+
+\begin{table}[h!]
+\caption{Confusion Matrix for Gradient Approach}  
+\begin{tabular}{ l *{5}{D{.}{.}{4}} }
+\toprule
+ & \multicolumn{5}{c}{\textbf{Predicted Class}} \\
+\cmidrule(lr){2-6}
+\textbf{Actual Class} & \multicolumn{1}{c}{G1} & \multicolumn{1}{c}{G2} & \multicolumn{1}{c}{G3} & \multicolumn{1}{c}{G4} & \multicolumn{1}{c}{G5} \\
+\midrule
+\texttt{G1} &0.1  &  0  & 0  & 0 & 0\\
+\texttt{G2} &0  &  0.1  & 0  & 0 & 0\\
+\texttt{G3} &0  &  0  & 0.1  & 0 & 0\\
+\texttt{G4} &0  &  0  & 0  & 0.1 & 0\\
+\texttt{G5} &0  &  0  & 0  & 0.3 & 0.7\\
+        \bottomrule             
+\end{tabular}
+\end{table}
+
 
 
 %\begin{figure}[h!]
@@ -936,28 +946,21 @@ Count &  &  &  &  &\\ \hline
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
-\multicolumn{1}{|c|}{Method for feature extraction + classifier}
-& \multicolumn{1}{|c|}{Accuracy}\\
-Bayes classifier\cite{Avraam2014StaticGR} & 83.40\% \\ \hline
+Method for feature extraction and classifier used & Average Accuracy \\ \hline
+Bayes classifier \cite{Avraam2014StaticGR} & 83.40\% \\ \hline
 PCA & 72.73\% \\ \hline
-Kumar's Autoencoders\cite{kumar2014static} & 83.36\% \\ \hline
-Masking Approach & 93.62\% \\ \hline
-Gradient Approach & 90.13\% \\ \hline
+Kumar's Autoencoders \cite{kumar2014static} & 83.36\% \\ \hline
+\textbf{Masking Approach} & 93.62\% \\ \hline
+\textbf{Gradient Approach} & 90.13\% \\ \hline
 \end{tabular}
-\label{table-tab2}
 \end{center}
 \end{table}
 
 
 \section{Conclusion and Future Scope}
-This paper deals with two algorithms in order to recognize the hand gestures and also compares their efficiencies with each other as well as established methods\cite{khan2012hand}. In our work, the geometry of the hand has been used for the recognition of hand gesture. It is a traditional type of algorithm and is thus robust.The proposed methods do not require any training phase\cite{7813732} to identify the hand gestures so is better than neural networks. 
+This paper deals with two algorithms in order to recognize the hand gestures and also compares their efficiencies with each other as well as established methods \cite{khan2012hand}. In our work, the geometry of the hand has been used for the recognition of hand gesture. It is a traditional type of algorithm and is thus robust.The proposed methods do not require any training phase \cite{7813732} to identify the hand gestures so is better than neural networks. 
 
-FUTURE SCOPE:
-
-Three dimensional hand model based approaches\cite{cheng2016survey} are gaining interest in the field of Gesture Recognition.
-
-
-
+Three dimensional hand model based approaches \cite{cheng2016survey} are gaining interest in the field of Gesture Recognition.
 The polpular gesture sensors used presesntly are:
 
 A. Time-of-Flight Sensors:
@@ -965,11 +968,11 @@ ToF-based 3D hand gesture recognition system uses point gestures to control a ro
 
 B. Kinect
 
- 1) skeletonbased recognition\cite{shotton2013real} and 
+ 1) skeletonbased recognition \cite{shotton2013real} and 
  
  2) depth-based recognition.
 
-C. Leap Motion : Leap motion is a newly released sensor that focuses on the accurate 3D hand positioning. It focuses on a specific area and has gained popularity over Kinect sensor in terms of better accuracy\cite{regenbrecht2013leap}.
+C. Leap Motion : Leap motion is a newly released sensor that focuses on the accurate 3D hand positioning. It focuses on a specific area and has gained popularity over Kinect sensor in terms of better accuracy \cite{regenbrecht2013leap}.
 
 
 % conference papers do not normally have an appendix

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.30)  30 MAR 2017 04:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.30)  31 MAR 2017 03:45
 entering extended mode
 **./Hand.tex
 (Hand.tex
@@ -247,6 +247,87 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \l_MT_above_shortintertext_sep=\dimen144
 \l_MT_below_shortintertext_sep=\dimen145
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\subfig\subfig.sty"
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen146
+\captionmargin@=\dimen147
+\captionwidth=\dimen148
+\caption@tempdima=\dimen149
+\caption@indent=\dimen150
+\caption@parindent=\dimen151
+\caption@hangindent=\dimen152
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IEEEta
+blestring \footnotesize \bgroup \par \centering \@IEEEtabletopskipstrut {\norma
+lfont \footnotesize #1}\\{\normalfont \footnotesize \scshape #2}\par \addvspace
+ {0.5\baselineskip }\egroup \@IEEEtablecaptionsepspace \else \@IEEEfigurecaptio
+nsepspace \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspac
+e \nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\nor
+malfont \footnotesize {#1.}\nobreakspace \nobreakspace }\parbox [t]{\hsize }{\n
+ormalfont \footnotesize \noindent \unhbox \@tempboxa #2}\else \ifCLASSOPTIONcon
+ference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }
+\else \hbox to\hsize {\normalfont \footnotesize \box \@tempboxa \hfil }\fi \fi 
+\fi .
+\c@ContinuedFloat=\count112
+)
+\c@KVtest=\count113
+\sf@farskip=\skip51
+\sf@captopadj=\dimen153
+\sf@capskip=\skip52
+\sf@nearskip=\skip53
+\c@subfigure=\count114
+\c@subfigure@save=\count115
+\c@lofdepth=\count116
+\c@subtable=\count117
+\c@subtable@save=\count118
+\c@lotdepth=\count119
+\sf@top=\skip54
+\sf@bottom=\skip55
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\dcolumn.sty"
+Package: dcolumn 2014/10/28 v1.06 decimal alignment package (DPC)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen154
+\extrarowheight=\dimen155
+\NC@list=\toks21
+\extratabsurround=\skip56
+\backup@length=\skip57
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen156
+\lightrulewidth=\dimen157
+\cmidrulewidth=\dimen158
+\belowrulesep=\dimen159
+\belowbottomsep=\dimen160
+\aboverulesep=\dimen161
+\abovetopsep=\dimen162
+\cmidrulesep=\dimen163
+\cmidrulekern=\dimen164
+\defaultaddspace=\dimen165
+\@cmidla=\count120
+\@cmidlb=\count121
+\@aboverulesep=\dimen166
+\@belowrulesep=\dimen167
+\@thisruleclass=\count122
+\@lastruleclass=\count123
+\@thisrulewidth=\dimen168
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
@@ -257,19 +338,10 @@ Package xcolor Info: Driver file: pdftex.def on input line 225.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty"
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
-Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
-\col@sep=\dimen146
-\extrarowheight=\dimen147
-\NC@list=\toks21
-\extratabsurround=\skip51
-\backup@length=\skip52
-)
 \everycr=\toks22
-\minrowclearance=\skip53
+\minrowclearance=\skip58
 )
-\rownum=\count112
+\rownum=\count124
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -286,48 +358,35 @@ LaTeX Warning: Overwriting file `./references.bib'.
 \openout15 = `references.bib'.
 
 
-(Hand.aux
-
-LaTeX Warning: Label `table-tab2' multiply defined.
-
-
-LaTeX Warning: Label `table-tab2' multiply defined.
-
-
-LaTeX Warning: Label `table-tab2' multiply defined.
-
-
-LaTeX Warning: Label `table-tab2' multiply defined.
-
-)
+(Hand.aux)
 \openout1 = `Hand.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 406.
-LaTeX Font Info:    ... okay on input line 406.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 406.
-LaTeX Font Info:    ... okay on input line 406.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 406.
-LaTeX Font Info:    ... okay on input line 406.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 406.
-LaTeX Font Info:    ... okay on input line 406.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 406.
-LaTeX Font Info:    ... okay on input line 406.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 406.
-LaTeX Font Info:    ... okay on input line 406.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 409.
+LaTeX Font Info:    ... okay on input line 409.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 409.
+LaTeX Font Info:    ... okay on input line 409.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 409.
+LaTeX Font Info:    ... okay on input line 409.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 409.
+LaTeX Font Info:    ... okay on input line 409.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 409.
+LaTeX Font Info:    ... okay on input line 409.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 409.
+LaTeX Font Info:    ... okay on input line 409.
 
 -- Lines per column: 56 (exact).
 ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count113
-\scratchdimen=\dimen148
+\scratchcounter=\count125
+\scratchdimen=\dimen169
 \scratchbox=\box30
-\nofMPsegments=\count114
-\nofMParguments=\count115
+\nofMPsegments=\count126
+\nofMParguments=\count127
 \everyMPshowfont=\toks23
-\MPscratchCnt=\count116
-\MPscratchDim=\dimen149
-\MPnumerator=\count117
-\makeMPintoPDFobject=\count118
+\MPscratchCnt=\count128
+\MPscratchDim=\dimen170
+\MPnumerator=\count129
+\makeMPintoPDFobject=\count130
 \everyMPtoPDFconversion=\toks24
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
@@ -374,51 +433,80 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 461.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 464.
 
-Underfull \hbox (badness 10000) in paragraph at lines 465--467
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 465--467
+Underfull \hbox (badness 10000) in paragraph at lines 468--470
 
  []
 
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no “ in font ptmr7t!
-<images/StandardDataset.png, id=1, 238.491pt x 52.998pt>
-File: images/StandardDataset.png Graphic file (type png)
 
-<use images/StandardDataset.png>
-Package pdftex.def Info: images/StandardDataset.png used on input line 526.
-(pdftex.def)             Requested size: 227.62776pt x 79.67632pt.
- [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+Underfull \hbox (badness 10000) in paragraph at lines 468--470
+
+ []
+
+<images/ges1.png, id=1, 30.1125pt x 36.135pt>
+File: images/ges1.png Graphic file (type png)
+ <use images/ges1.png>
+Package pdftex.def Info: images/ges1.png used on input line 530.
+(pdftex.def)             Requested size: 39.74872pt x 47.70271pt.
+
+<images/ges2.png, id=3, 30.1125pt x 36.135pt>
+File: images/ges2.png Graphic file (type png)
+ <use images/ges2.png>
+Package pdftex.def Info: images/ges2.png used on input line 531.
+(pdftex.def)             Requested size: 39.74872pt x 47.70271pt.
+
+<images/ges3.png, id=4, 30.1125pt x 36.135pt>
+File: images/ges3.png Graphic file (type png)
+ <use images/ges3.png>
+Package pdftex.def Info: images/ges3.png used on input line 532.
+(pdftex.def)             Requested size: 39.74872pt x 47.70271pt.
+
+<images/ges4.png, id=5, 30.1125pt x 36.135pt>
+File: images/ges4.png Graphic file (type png)
+ <use images/ges4.png>
+Package pdftex.def Info: images/ges4.png used on input line 533.
+(pdftex.def)             Requested size: 39.74872pt x 47.70271pt.
+
+<images/ges5.png, id=6, 30.1125pt x 36.135pt>
+File: images/ges5.png Graphic file (type png)
+ <use images/ges5.png>
+Package pdftex.def Info: images/ges5.png used on input line 534.
+(pdftex.def)             Requested size: 39.74872pt x 47.70271pt.
+
+Overfull \hbox (6.74359pt too wide) in paragraph at lines 529--536
+[][] 
+ []
+
+[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
- <./images/StandardDataset.png>]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 559.
+ <./images/ges1.png> <./images/ges2.png> <./images/ges3.png> <./images/ges4.png
+> <./images/ges5.png>]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 568.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 559.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 568.
 
-<images/skincolor.jpg, id=10, 1205.50375pt x 904.37875pt>
+<images/skincolor.jpg, id=20, 1205.50375pt x 904.37875pt>
 File: images/skincolor.jpg Graphic file (type jpg)
 
 <use images/skincolor.jpg>
-Package pdftex.def Info: images/skincolor.jpg used on input line 582.
+Package pdftex.def Info: images/skincolor.jpg used on input line 591.
 (pdftex.def)             Requested size: 184.93813pt x 142.261pt.
 
-<images/gaussian.jpg, id=11, 1205.50375pt x 904.37875pt>
+<images/gaussian.jpg, id=21, 1205.50375pt x 904.37875pt>
 File: images/gaussian.jpg Graphic file (type jpg)
 
 <use images/gaussian.jpg>
-Package pdftex.def Info: images/gaussian.jpg used on input line 588.
+Package pdftex.def Info: images/gaussian.jpg used on input line 597.
 (pdftex.def)             Requested size: 184.93813pt x 142.261pt.
 
 
@@ -428,86 +516,158 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 605--606
+Underfull \hbox (badness 10000) in paragraph at lines 614--615
 []$\OML/cmm/m/it/10 likely[]skin\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 i; j\OT1/cmr/
 m/n/10 ) = [\OML/cmm/m/it/10 power\OT1/cmr/m/n/10 (2 \OMS/cmsy/m/n/10  \OML/cm
 m/m/it/10 pi \OMS/cmsy/m/n/10 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 609--610
+Underfull \hbox (badness 10000) in paragraph at lines 618--619
 []$\OML/cmm/m/it/10 likely[]skin\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 i; j\OT1/cmr/
 m/n/10 ) = [\OML/cmm/m/it/10 power\OT1/cmr/m/n/10 (2 \OMS/cmsy/m/n/10  \OML/cm
 m/m/it/10 pi \OMS/cmsy/m/n/10 
  []
 
-<images/grid1.png, id=12, 219.82124pt x 225.84375pt>
+<images/grid1.png, id=22, 219.82124pt x 225.84375pt>
 File: images/grid1.png Graphic file (type png)
  <use images/grid1.png>
-Package pdftex.def Info: images/grid1.png used on input line 619.
+Package pdftex.def Info: images/grid1.png used on input line 628.
 (pdftex.def)             Requested size: 156.49344pt x 156.49744pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [2 <./images/skincolor.jpg> <./images/gaussian.jpg>]
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 688.
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 705.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omlptm.fd"
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 688.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 705.
 
-<images/method1_1.png, id=26, 240.29774pt x 84.91725pt>
+<images/method1_1.png, id=36, 240.29774pt x 84.91725pt>
 File: images/method1_1.png Graphic file (type png)
 
 <use images/method1_1.png>
-Package pdftex.def Info: images/method1_1.png used on input line 700.
+Package pdftex.def Info: images/method1_1.png used on input line 717.
 (pdftex.def)             Requested size: 227.62155pt x 85.36017pt.
 
-<images/fin5m2.png, id=27, 431.81325pt x 208.3785pt>
-File: images/fin5m2.png Graphic file (type png)
- <use images/fin5m2.png>
-Package pdftex.def Info: images/fin5m2.png used on input line 753.
-(pdftex.def)             Requested size: 227.62779pt x 85.35942pt.
+<images/method2_5.png, id=37, 194.52675pt x 193.9245pt>
+File: images/method2_5.png Graphic file (type png)
+
+<use images/method2_5.png>
+Package pdftex.def Info: images/method2_5.png used on input line 767.
+(pdftex.def)             Requested size: 65.04256pt x 64.84155pt.
+ <images/plot5.png, id=38, 528.5346pt x 298.83646pt>
+File: images/plot5.png Graphic file (type png)
+
+<use images/plot5.png>
+Package pdftex.def Info: images/plot5.png used on input line 768.
+(pdftex.def)             Requested size: 115.63243pt x 65.37943pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/fin4m2.png, id=28, 85.7604pt x 40.59164pt>
-File: images/fin4m2.png Graphic file (type png)
- <use images/fin4m2.png>
-Package pdftex.def Info: images/fin4m2.png used on input line 759.
-(pdftex.def)             Requested size: 227.64867pt x 85.36945pt.
+<images/method2_4.png, id=39, 193.9245pt x 190.91325pt>
+File: images/method2_4.png Graphic file (type png)
+
+<use images/method2_4.png>
+Package pdftex.def Info: images/method2_4.png used on input line 775.
+(pdftex.def)             Requested size: 65.04256pt x 64.03279pt.
+ <images/plot4.png, id=40, 528.5346pt x 298.83646pt>
+File: images/plot4.png Graphic file (type png)
+
+<use images/plot4.png>
+Package pdftex.def Info: images/plot4.png used on input line 776.
+(pdftex.def)             Requested size: 115.63243pt x 65.37943pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<images/fin2m2.png, id=30, 468.5505pt x 196.3335pt>
-File: images/fin2m2.png Graphic file (type png)
- <use images/fin2m2.png>
-Package pdftex.def Info: images/fin2m2.png used on input line 765.
-(pdftex.def)             Requested size: 227.6185pt x 85.35944pt.
+<images/method2_2.png, id=41, 192.72pt x 190.311pt>
+File: images/method2_2.png Graphic file (type png)
+ <use images/method2_2.png>
+Package pdftex.def Info: images/method2_2.png used on input line 783.
+(pdftex.def)             Requested size: 65.04256pt x 64.22864pt.
+
+<images/plot2.png, id=42, 528.5346pt x 298.83646pt>
+File: images/plot2.png Graphic file (type png)
+ <use images/plot2.png>
+Package pdftex.def Info: images/plot2.png used on input line 784.
+(pdftex.def)             Requested size: 115.63243pt x 65.37943pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [3 <./images/grid1.png> <./images/method1_1.png>]
-<images/StandardDataset1.png, id=34, 221.02576pt x 83.1105pt>
-File: images/StandardDataset1.png Graphic file (type png)
+File: images/ges1.png Graphic file (type png)
+ <use images/ges1.png>
+Package pdftex.def Info: images/ges1.png used on input line 813.
+(pdftex.def)             Requested size: 39.74872pt x 47.70271pt.
+File: images/ges2.png Graphic file (type png)
 
-<use images/StandardDataset1.png>
-Package pdftex.def Info: images/StandardDataset1.png used on input line 793.
-(pdftex.def)             Requested size: 227.62871pt x 85.35872pt.
+<use images/ges2.png>
+Package pdftex.def Info: images/ges2.png used on input line 814.
+(pdftex.def)             Requested size: 39.74872pt x 47.70271pt.
+File: images/ges3.png Graphic file (type png)
+ <use images/ges3.png>
+Package pdftex.def Info: images/ges3.png used on input line 815.
+(pdftex.def)             Requested size: 39.74872pt x 47.70271pt.
+File: images/ges4.png Graphic file (type png)
+ <use images/ges4.png>
+Package pdftex.def Info: images/ges4.png used on input line 816.
+(pdftex.def)             Requested size: 39.74872pt x 47.70271pt.
+File: images/ges5.png Graphic file (type png)
 
-<images/ourdataset.png, id=35, 213.79875pt x 66.2475pt>
-File: images/ourdataset.png Graphic file (type png)
+<use images/ges5.png>
+Package pdftex.def Info: images/ges5.png used on input line 817.
+(pdftex.def)             Requested size: 39.74872pt x 47.70271pt.
 
-<use images/ourdataset.png>
-Package pdftex.def Info: images/ourdataset.png used on input line 865.
-(pdftex.def)             Requested size: 241.84749pt x 113.81912pt.
+Overfull \hbox (6.74359pt too wide) in paragraph at lines 812--819
+[][] 
+ []
+
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 849.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+<images/geo1.png, id=46, 36.135pt x 60.225pt>
+File: images/geo1.png Graphic file (type png)
+ <use images/geo1.png>
+Package pdftex.def Info: images/geo1.png used on input line 878.
+(pdftex.def)             Requested size: 39.74872pt x 66.25136pt.
+
+<images/geo2.png, id=47, 36.135pt x 60.225pt>
+File: images/geo2.png Graphic file (type png)
+ <use images/geo2.png>
+Package pdftex.def Info: images/geo2.png used on input line 879.
+(pdftex.def)             Requested size: 39.74872pt x 66.25136pt.
+
+<images/geo3.png, id=48, 36.135pt x 60.225pt>
+File: images/geo3.png Graphic file (type png)
+ <use images/geo3.png>
+Package pdftex.def Info: images/geo3.png used on input line 880.
+(pdftex.def)             Requested size: 39.74872pt x 66.25136pt.
+
+<images/geo4.png, id=49, 36.135pt x 60.225pt>
+File: images/geo4.png Graphic file (type png)
+ <use images/geo4.png>
+Package pdftex.def Info: images/geo4.png used on input line 881.
+(pdftex.def)             Requested size: 39.74872pt x 66.25136pt.
+
+<images/geo5.png, id=50, 36.135pt x 60.225pt>
+File: images/geo5.png Graphic file (type png)
+ <use images/geo5.png>
+Package pdftex.def Info: images/geo5.png used on input line 882.
+(pdftex.def)             Requested size: 39.74872pt x 66.25136pt.
+
+Overfull \hbox (6.74359pt too wide) in paragraph at lines 877--884
+[][] 
+ []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -515,8 +675,10 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[4 <./images/fin5m2.png> <./images/fin4m2.png> <./images/fin2m2.png> <./images/
-StandardDataset1.png> <./images/ourdataset.png>] (Hand.bbl)
+[4 <./images/method2_5.png> <./images/plot5.png (PNG copy)> <./images/method2_4
+.png> <./images/plot4.png (PNG copy)> <./images/method2_2.png> <./images/plot2.
+png (PNG copy)> <./images/geo1.png> <./images/geo2.png> <./images/geo3.png> <./
+images/geo4.png> <./images/geo5.png>] (Hand.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -528,35 +690,34 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[5] (Hand.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+[5] (Hand.aux) ) 
 Here is how much of TeX's memory you used:
- 4453 strings out of 493333
- 66773 string characters out of 3139171
- 252306 words of memory out of 3000000
- 7906 multiletter control sequences out of 15000+200000
- 40695 words of font info for 82 fonts, out of 3000000 for 9000
+ 5812 strings out of 493333
+ 90640 string characters out of 3139171
+ 285119 words of memory out of 3000000
+ 9233 multiletter control sequences out of 15000+200000
+ 41700 words of font info for 84 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
- 41i,14n,35p,948b,332s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
-5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/ti
-mes/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Hand.pdf (5 pages, 813001 bytes).
+ 44i,18n,49p,949b,435s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times
+/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Hand.pdf (5 pages, 1305985 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
+ 118 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 
