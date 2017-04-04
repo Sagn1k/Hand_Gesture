@@ -42,6 +42,30 @@ W.~T. Freeman and M.~Roth, ``Orientation histograms for hand gesture
   recognition,'' in \emph{International workshop on automatic face and gesture
   recognition}, vol.~12, 1995, pp. 296--301.
 
+\bibitem{cheng2016survey}
+H.~Cheng, L.~Yang, and Z.~Liu, ``Survey on 3d hand gesture recognition,''
+  \emph{IEEE Transactions on Circuits and Systems for Video Technology},
+  vol.~26, no.~9, pp. 1659--1673, 2016.
+
+\bibitem{droeschel2011learning}
+D.~Droeschel, J.~St{\"u}ckler, and S.~Behnke, ``Learning to interpret pointing
+  gestures with a time-of-flight camera,'' in \emph{Proceedings of the 6th
+  international conference on Human-robot interaction}.\hskip 1em plus 0.5em
+  minus 0.4em\relax ACM, 2011, pp. 481--488.
+
+\bibitem{shotton2013real}
+J.~Shotton, T.~Sharp, A.~Kipman, A.~Fitzgibbon, M.~Finocchio, A.~Blake,
+  M.~Cook, and R.~Moore, ``Real-time human pose recognition in parts from
+  single depth images,'' \emph{Communications of the ACM}, vol.~56, no.~1, pp.
+  116--124, 2013.
+
+\bibitem{regenbrecht2013leap}
+H.~Regenbrecht, J.~Collins, and S.~Hoermann, ``A leap-supported, hybrid ar
+  interface approach,'' in \emph{Proceedings of the 25th Australian
+  Computer-Human Interaction Conference: Augmentation, Application, Innovation,
+  Collaboration}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2013, pp.
+  281--284.
+
 \bibitem{vishwakarma2015efficient}
 D.~Vishwakarma and R.~Kapoor, ``An efficient interpretation of hand gestures to
   control smart interactive television,'' \emph{Int. J. Comput. Vis. Robot},
@@ -83,29 +107,5 @@ D.~K. Vishwakarma, Priyadarshani, and K.~Singh, ``A framework for recognition
   of hand gesture in static postures,'' in \emph{2016 International Conference
   on Computing, Communication and Automation (ICCCA)}, April 2016, pp.
   294--298.
-
-\bibitem{cheng2016survey}
-H.~Cheng, L.~Yang, and Z.~Liu, ``Survey on 3d hand gesture recognition,''
-  \emph{IEEE Transactions on Circuits and Systems for Video Technology},
-  vol.~26, no.~9, pp. 1659--1673, 2016.
-
-\bibitem{droeschel2011learning}
-D.~Droeschel, J.~St{\"u}ckler, and S.~Behnke, ``Learning to interpret pointing
-  gestures with a time-of-flight camera,'' in \emph{Proceedings of the 6th
-  international conference on Human-robot interaction}.\hskip 1em plus 0.5em
-  minus 0.4em\relax ACM, 2011, pp. 481--488.
-
-\bibitem{shotton2013real}
-J.~Shotton, T.~Sharp, A.~Kipman, A.~Fitzgibbon, M.~Finocchio, A.~Blake,
-  M.~Cook, and R.~Moore, ``Real-time human pose recognition in parts from
-  single depth images,'' \emph{Communications of the ACM}, vol.~56, no.~1, pp.
-  116--124, 2013.
-
-\bibitem{regenbrecht2013leap}
-H.~Regenbrecht, J.~Collins, and S.~Hoermann, ``A leap-supported, hybrid ar
-  interface approach,'' in \emph{Proceedings of the 25th Australian
-  Computer-Human Interaction Conference: Augmentation, Application, Innovation,
-  Collaboration}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2013, pp.
-  281--284.
 
 \end{thebibliography}
