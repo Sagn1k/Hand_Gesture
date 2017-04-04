@@ -822,7 +822,7 @@ The rule-based classifiers learned model is represented as a set of if-then rule
 Accuracy is then given by $(c/t)*100$.
 
 \subsection{STANDARD DATA-SET}
-\begin{figure}[!h]
+\begin{figure}[h!]
 \begin{tabular}{ccccc}
 \subfloat[G1]{\includegraphics[width = 0.55in]{ges1}} &
 \subfloat[G2]{\includegraphics[width = 0.55in]{ges2}} &
@@ -834,14 +834,14 @@ Accuracy is then given by $(c/t)*100$.
 \end{figure}
 We applied our algorithms on standard Massey University database \cite{barczak2011new} of images available online.We used only 5 hand gestures from the data-set. The skin segments taken to train our Gaussian skin model were randomly taken from the people of the same ethnicity as that of the dataset.
 
-Accuracy by Method 1: - 93.622\%
+Accuracy by Masking Approach: - 93.622\%
 
-Accuracy by Method 2: - 90.136\%
+Accuracy by Gradient Approach: - 90.136\%
 %
 %\begin{figure}[h!]
 %	\centering
 %	\includegraphics[width = 8cm, height = 3cm]{cof1_1}
-%	\caption{Confusion Matrix of Method 1}
+%	\caption{Confusion Matrix of Masking Approach}
 %\end{figure}
 %
 %\begin{figure}[h!]
@@ -900,9 +900,9 @@ Accuracy by Method 2: - 90.136\%
 
 To have an understanding of real\- time results, we collect our database of images and further test the accuracy. Ten pictures of ten different individuals were taken. The skin segments taken to train our Gaussian skin model were randomly taken from the skin samples of people of various ethnicity and region like North Indians, South Indians, North \- East Indians to test the robustness of our algorithm.
 
-Accuracy by Method 1 : - 96\%
+Accuracy by Masking Approach : - 96\%
 
-Accuracy by Method 2 : - 98\%
+Accuracy by Gradient Approach : - 98\%
 
 \begin{table}[h!]
 \caption{Confusion Matrix for Masking Approach}  
@@ -944,7 +944,7 @@ Accuracy by Method 2 : - 98\%
 %\begin{figure}[h!]
 %	\centering
 %	\includegraphics[width = 8cm, height = 3cm]{cof2_1}
-%	\caption{Confusion Matrix of Method 1}
+%	\caption{Confusion Matrix of Masking Approach}
 %\end{figure}
 %
 %
