@@ -7,6 +7,7 @@
 \usepackage{dcolumn}
 \usepackage{booktabs}
 \usepackage[table]{xcolor}
+\usepackage{ragged2e}
 \graphicspath{ {images/}}
 
 
@@ -601,7 +602,8 @@ Plotting a Gaussian Curve for this variation yields the Graph in figure 3.
 This Method has a great accuracy and calibration advantage over the YCbCr model and is thus more user-friendly. It can be calibrated for all fairer to darker skins with just a change in input skin section (which was trained for the Gaussian ); in contrast to change in Cb and Cr values which demand a technical blueprint.
 
 \subsection{PSEUDO CODE:}
--imresize([200 200]) 
+\begin{flushleft}
+$imresize([200 200])$ 
 
 SKIN SEGMENTATION:
 
@@ -615,14 +617,14 @@ $likely\_skin(i,j) = [power(2*pi*power(det(rbcov),0.5),-1)]*exp(-0.5* y'*inv(rbc
 
 For every pixel we calculate :
 
-$likely\_skin(i,j) = [power(2*pi*power(det(rbcov),0.5),-1)]*exp(-0.5* y'*inv(rbcov)* y);$ \%This gives the Gaussian of the image. 
+$likely\_skin(i,j) = [power(2*pi*power(det(rbcov),0.5),-1)]*exp(-0.5*y'*inv(rbcov)*y);$ \% gives the Gaussian of the image. 
 
-$BW = im2bw(likely_skin,thresh); $ \%Morphological operations for segmenting the hand shape accurately
+$BW = im2bw(likely_skin,thresh); $ \% Morphological operations for segmenting the hand shape accurately
 
 $imclose;imdilate;imfill('holes');$
 
 Find the hand(palm width) 
-
+\end{flushleft}
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width = 5.5cm, height = 5.5cm]{grid1}
@@ -701,12 +703,12 @@ The subtraction of the mask \cite{7279962} from the binary image provides us the
 \subsubsection{PSEUDO CODE}
 
 \textbf{Masking Approach}
-
- 3 \textless ratio \textless 4 
+\begin{flushleft}
+3 \textless ratio \textless 4
 
 $erode\_filter=ones(1,floor(width/ratio); $ \% remove small components such as noises and uneroded finger parts
  
-$bwareaopen(eroded_image,40);$ \%dilate to obtain the original palm shape and size. 
+$bwareaopen(eroded\_image,40);$ \%dilate to obtain the original palm shape and size. 
 
 $fingers=~palm.*BW$ 
 
@@ -717,7 +719,7 @@ $regionprops \rightarrow$ Area threshholding to count the no. of bounding box to
 	\includegraphics[width = 8cm, height = 3cm]{method1_1}
 	%\caption{Gaussian curve of variations in Fig.1}
 \end{figure}
-
+\end{flushleft}
 \subsection{Method 2: GRADIENT APPROACH}
 After acquiring a binary image of the segmented skin region, we extract the count of active fingers by using the information of change of gradients at the finger-tip region.
 Once the centroid of the binary image is obtained, the shortest distance of the boundary of the silhouette from this centroid point is determined. This minimum distance is determined in all directions from the centroid and the area thus formed depicts the mask for the binary silhouette. This area usually comprises the palm region of the hand and hence forms the base of the mask \cite{6481804}. Mask subtraction then gives us the fingertip section in addition to the wrist area.
@@ -788,21 +790,19 @@ The final gradient map is a plot for column locations, and thresholding identifi
 
 \subsubsection{PSEUDO CODE}
 \textbf{Gradient Approach}
+\begin{flushleft}
+
 
 $erode\_filter= strel('disk',5);$ \% remove small components such as noises and uneroded finger parts
  
-$[Gmag, Gdir] = imgradient(eroded image); $
+$[Gmag, Gdir] = imgradient(eroded \_ image); $ \% find the change and direction of gradient at the boundary of the entire hand region. 
 
-Find the change and direction of gradient at the boundary of the entire hand region. 
-
-$pdist$(co-ordinates of each boundary point and centroid ,'euclidean');
-
-Find the Euclidean Distance between every boundary point from the center.
+$pdist$(co-ordinates of each boundary point and centroid ,'euclidean'); \% find the Euclidean Distance between every boundary point from the center.
 
 Low pass filter $\rightarrow$ Removes the noise effects, identifies the false high-gradient-change locations.
 
 Plot the final gradient map $\rightarrow$ column locations, and thresholding identifies the count of fingers.
-
+\end{flushleft}
 \section{RESULT}
 The rule-based classifiers learned model is represented as a set of if-then rules. Let the correct number of tests be c out of a total of t tests.
 Accuracy is then given by $(c/t)*100$.
