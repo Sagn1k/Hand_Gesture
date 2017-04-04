@@ -808,8 +808,11 @@ $erode\_filter= strel('disk',5);$ \% remove small components such as noises and 
  
 $[Gmag, Gdir] = imgradient(eroded \_ image); $ \% find the change and direction of gradient at the boundary of the entire hand region. 
 
-$pdist$(co-ordinates of each boundary point and centroid ,'euclidean'); \% find the Euclidean Distance between every boundary point from the center.
-
+for $i=1:width$\\
+\quad for $j=1:length$\\
+\quad \quad$D=[i,j;x \, co-ordinate \, of \, centroid,y \, co-ordinate \, of \, centroid]$;\\
+\quad \quad$d=pdist$(D); \% find the Euclidean Distance between every boundary point from the centroid.\\
+\quad \quad $Dist(j,i)=d;$ \% distance matrix.\\
 Low pass filter $\rightarrow$ Removes the noise effects, identifies the false high-gradient-change locations.
 
 Plot the final gradient map $\rightarrow$ column locations, and thresholding identifies the count of fingers.
@@ -829,7 +832,7 @@ Accuracy is then given by $(c/t)*100$.
 \end{tabular}
 \caption{Hand Gestures used from Standard Database}
 \end{figure}
-We applied our algorithms on standard Massey University database \cite{barczak2011new} of images available online.We used only 5 hand gestures from the data-set
+We applied our algorithms on standard Massey University database \cite{barczak2011new} of images available online.We used only 5 hand gestures from the data-set. The skin segments taken to train our Gaussian skin model were randomly taken from the people of the same ethnicity as that of the dataset.
 
 Accuracy by Method 1: - 93.622\%
 
@@ -895,7 +898,7 @@ Accuracy by Method 2: - 90.136\%
 \caption{Hand Gestures used from our created dataset}
 \end{figure}
 
-To have an understanding of real\- time results, we collect our database of images and further test the accuracy. We collect hand gestures of people of different ethnicity and region like North Indians, South Indians, North \- East Indians. Ten pictures of ten different individuals was taken.
+To have an understanding of real\- time results, we collect our database of images and further test the accuracy. Ten pictures of ten different individuals were taken. The skin segments taken to train our Gaussian skin model were randomly taken from the skin samples of people of various ethnicity and region like North Indians, South Indians, North \- East Indians to test the robustness of our algorithm.
 
 Accuracy by Method 1 : - 96\%
 

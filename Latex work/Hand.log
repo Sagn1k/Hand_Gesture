@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.30)  4 APR 2017 16:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.30)  4 APR 2017 18:10
 entering extended mode
 **./Hand.tex
 (Hand.tex
@@ -597,86 +597,71 @@ Package pdftex.def Info: images/plot2.png used on input line 797.
 (pdftex.def)             Requested size: 115.63243pt x 65.37943pt.
 File: images/ges1.png Graphic file (type png)
  <use images/ges1.png>
-Package pdftex.def Info: images/ges1.png used on input line 824.
+Package pdftex.def Info: images/ges1.png used on input line 827.
 (pdftex.def)             Requested size: 39.74872pt x 47.70271pt.
 File: images/ges2.png Graphic file (type png)
  <use images/ges2.png>
-Package pdftex.def Info: images/ges2.png used on input line 825.
+Package pdftex.def Info: images/ges2.png used on input line 828.
 (pdftex.def)             Requested size: 39.74872pt x 47.70271pt.
 File: images/ges3.png Graphic file (type png)
 
 <use images/ges3.png>
-Package pdftex.def Info: images/ges3.png used on input line 826.
+Package pdftex.def Info: images/ges3.png used on input line 829.
 (pdftex.def)             Requested size: 39.74872pt x 47.70271pt.
 File: images/ges4.png Graphic file (type png)
  <use images/ges4.png>
-Package pdftex.def Info: images/ges4.png used on input line 827.
+Package pdftex.def Info: images/ges4.png used on input line 830.
 (pdftex.def)             Requested size: 39.74872pt x 47.70271pt.
 File: images/ges5.png Graphic file (type png)
  <use images/ges5.png>
-Package pdftex.def Info: images/ges5.png used on input line 828.
+Package pdftex.def Info: images/ges5.png used on input line 831.
 (pdftex.def)             Requested size: 39.74872pt x 47.70271pt.
 
-Overfull \hbox (6.74359pt too wide) in paragraph at lines 823--830
+Overfull \hbox (6.74359pt too wide) in paragraph at lines 826--833
 [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 860.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 863.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 <images/geo1.png, id=46, 36.135pt x 60.225pt>
 File: images/geo1.png Graphic file (type png)
  <use images/geo1.png>
-Package pdftex.def Info: images/geo1.png used on input line 889.
+Package pdftex.def Info: images/geo1.png used on input line 892.
 (pdftex.def)             Requested size: 39.74872pt x 66.25136pt.
 
 <images/geo2.png, id=47, 36.135pt x 60.225pt>
 File: images/geo2.png Graphic file (type png)
  <use images/geo2.png>
-Package pdftex.def Info: images/geo2.png used on input line 890.
+Package pdftex.def Info: images/geo2.png used on input line 893.
 (pdftex.def)             Requested size: 39.74872pt x 66.25136pt.
 
 <images/geo3.png, id=48, 36.135pt x 60.225pt>
 File: images/geo3.png Graphic file (type png)
  <use images/geo3.png>
-Package pdftex.def Info: images/geo3.png used on input line 891.
+Package pdftex.def Info: images/geo3.png used on input line 894.
 (pdftex.def)             Requested size: 39.74872pt x 66.25136pt.
 
 <images/geo4.png, id=49, 36.135pt x 60.225pt>
 File: images/geo4.png Graphic file (type png)
  <use images/geo4.png>
-Package pdftex.def Info: images/geo4.png used on input line 892.
+Package pdftex.def Info: images/geo4.png used on input line 895.
 (pdftex.def)             Requested size: 39.74872pt x 66.25136pt.
 
 <images/geo5.png, id=50, 36.135pt x 60.225pt>
 File: images/geo5.png Graphic file (type png)
  <use images/geo5.png>
-Package pdftex.def Info: images/geo5.png used on input line 893.
+Package pdftex.def Info: images/geo5.png used on input line 896.
 (pdftex.def)             Requested size: 39.74872pt x 66.25136pt.
 
-Overfull \hbox (6.74359pt too wide) in paragraph at lines 888--895
+Overfull \hbox (6.74359pt too wide) in paragraph at lines 891--898
 [][] 
  []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [4 <./images/method2_5.png> <./images/plot5.png (PNG copy)> <./images/method2_4
 .png> <./images/plot4.png (PNG copy)> <./images/method2_2.png> <./images/plot2.
@@ -697,7 +682,7 @@ Before submitting the final camera ready copy, remember to:
 Here is how much of TeX's memory you used:
  5886 strings out of 493333
  92202 string characters out of 3139171
- 286990 words of memory out of 3000000
+ 281990 words of memory out of 3000000
  9300 multiletter control sequences out of 15000+200000
  41700 words of font info for 84 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -718,7 +703,7 @@ type1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times
 /utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/
 Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiK
 TeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Hand.pdf (5 pages, 1306001 bytes).
+Output written on Hand.pdf (5 pages, 1399369 bytes).
 PDF statistics:
  118 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
