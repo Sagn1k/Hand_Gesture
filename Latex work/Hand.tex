@@ -8,6 +8,9 @@
 \usepackage{booktabs}
 \usepackage[table]{xcolor}
 \usepackage{ragged2e}
+\newcommand{\RN}[1]{%
+  \textup{\uppercase\expandafter{\romannumeral#1}}%
+}
 \graphicspath{ {images/}}
 
 
@@ -415,7 +418,7 @@ month={April},}
 % not capitalized unless they are the first or last word of the title.
 % Linebreaks \\ can be used within to get better formatting as desired.
 % Do not put math or special symbols in the title.
-\title{A Static Hand Gesture Recognition System to Recognize the Total number of Fingers}
+\title{A unified framework for the recognition of raised finger in a static hand posture}
 
 
 % author names and affiliations
@@ -467,11 +470,7 @@ Email: \IEEEauthorrefmark{1}dvishwakarma@gmail.com ,\IEEEauthorrefmark{2}sahibma
 % As a general rule, do not put math, special symbols or citations
 % in the abstract
 \begin{abstract}
-<<<<<<< HEAD
 The main purpose of gesture recognition systems is to understand important expressions of motion by humans which involve hands, head, face, arms, or body.It is of major importance in designing an expert interface between humans and computers.We take into account the two possible fixed geometries to work on. The proposed methods follow the procedure of Preprocessing which helps with noise removal and image enhancement; Segmentation of hand region uses skin likelihood method to extract skin color; Feature extraction uses morphological and geometry based functions to extract the fingers; and active fingers are counted by method of Rule based Classification. In order to test performance, an experiment is conducted using standard and a self-generated dataset of images. The accuracy achieved on these dataset is greater than on similar state of arts.\\
-=======
-The main purpose of gesture recognition systems is to understand important expressions of motion by humans which involve hands, head, face, arms, or body.It is of major importance in designing an expert interface between humans and computers.We take into account the two possible fixed geometries to work on. The proposed methods follow the procedure of Preprocessing which helps with noise removal and image enhancement; Segmentation of hand region uses skin likelihood method to extract skin color; Feature extraction uses morphological and geometry based functions to extract the fingers; and active fingers are counted by method of Rule based Classification. In order to test performance, an experiment is conducted using standard and a self-generated dataset of images. The accuracy achieved on these dataset is greater than on similar state of arts. \\ \\
->>>>>>> de1b1cbb592152fd8f4a5cc981247c8f30570069
 
 \begin{IEEEkeywords}
 \textit{Hand Gestures, Skin Segmentation, Active Fingers, Finger Count, Mask Generation, Recognition, Low Resolution}
@@ -501,10 +500,10 @@ The main purpose of gesture recognition systems is to understand important expre
 An efficient human computer interplay is prominent in the present day framework of interactive and smart computing. Gesture recognition is the leading progress in this direction.
 Gesture recognition is the substantiated analysis of a human movement by a computing device
 
- There are methods which used extra hardware accessories such as color markers and data glove devices to easily extract a complete classification of gesture traits for identification \cite{1199054} . Neural Network classifiers have been implemented for gestures classification \cite{Murakami:1991:GRU:108844.108900} but it is long-drawn out and as the amount of training data grows, the time necessitated for classification is extended too.Orientation histogram method \cite{freeman1995orientation} has some inherent difficulties which are; different gestures could have related orientation histograms, and related gestures might have distinctive orientation histograms. Other methods based on the appearance of the hand use the color of our skin to section the hand and obtain necessary features, these methods are considered natural, simple and less computationally costly compared with methods mentioned before \cite{1199054} .
+ There are methods which use extra hardware accessories such as color markers and data glove devices to easily extract a complete classification of gesture traits for identification \cite{1199054} . Neural Network classifiers have been implemented for gestures classification \cite{Murakami:1991:GRU:108844.108900} but it is long-drawn out and as the amount of training data grows, the time necessitated for classification is extended. Orientation histogram method \cite{freeman1995orientation} has some inherent difficulties like different gestures could have related orientation histograms, and related gestures might have distinctive orientation histograms. Other methods based on the appearance of the hand use the color of our skin to section the hand and obtain necessary features, these methods are considered natural, simple and less computationally costly compared with methods mentioned before \cite{1199054} .
 
-Three dimensional hand model based approaches \cite{cheng2016survey} are earning interest in the domain of Gesture Recognition.		Three dimensional hand model based approaches \cite{cheng2016survey} are gaining interest in the field of Gesture Recognition.
-The popular gesture sensors used presently are:
+Three dimensional hand model based approaches \cite{cheng2016survey} are earning interest in the domain of Gesture Recognition. Three dimensional hand model based approaches are gaining interest in the field of Gesture Recognition.
+The popular gesture sensors being used presently are:
 
 A. Time-of-Flight Sensors:
 ToF-based 3D hand gesture recognition system uses point gestures to control a robot \cite{droeschel2011learning}.
@@ -522,7 +521,7 @@ This paper proposes two methods for counting the number of active fingers. These
 Since the proposed method works on geometric properties and does not require any extracted features; it works well on low-resolution images which is a great advantage for developers regarding data storage.
 
 The algorithm first helps with skin segmentation from the region of interest. Further, the number of active fingers are counted after operating them with a range of morphological operations.
-In this paper section 2 and 3 describe the algorithms proposed. Further sections discuss the Results (4), Conclusions (5) and Future scope (6) of our work.
+In this paper section \RN{2} and \RN{3} and \RN{4} describe the algorithms proposed. Further sections discuss the Results (\RN{5}), Conclusion and Future scope (\RN{6}) of our work.
 
 
 %This paper is composed into following following sections blah!
@@ -541,7 +540,7 @@ Monocular depth estimation/Image structure/Points tracking or Optical flow/ Mult
 
 The Region of interest can also be extracted by using instruments like Kinect which uses an RGB camera with a depth sensor.
 
-We have used gestures G1, G2, G3, G4 and G5.
+We have used gestures G1, G2, G3, G4 and G5 which are shown with their respective extracted Region of Interest.
 \begin{figure}[!h]
 \begin{tabular}{ccccc}
 \subfloat[G1]{\includegraphics[width = 0.55in]{ges1}} &
@@ -557,8 +556,7 @@ We have used gestures G1, G2, G3, G4 and G5.
 
 The most important part of hand gesture recognition is the skin segmentation. Segmentation accuracy determines the eventual success or failure of an automated analysis procedure.For segmentation, we first convert the RGB colored image into the YCbCr color model.
 
-The transformation of the original RGB colour image is done using
-the following equations:
+The transformation of the original RGB colour image is done using the equations (1),(2) and (3):
 
 \begin{equation}
  Y = 0.2990R + 0.5870G + 0.1140B
@@ -575,7 +573,7 @@ The mean values of chrominance components are used to extract the skin color of 
 
 In the earlier works, the YCbCr color model has been used by a basic mathematic operation of thresholding on chromaticity and luminance values. No method has yet been settled which determines the thresholding accurately.So, alternatively, we use a modified approach called a skin likelihood model for skin segmentation.
 
-This model is devised from the maximum likelihood paradigm, which has two parameters: covariance matrix and mean vector that maximizes the likelihood function. The Gaussian likelihood function \cite{vishwakarma2015efficient} has unique maxima, and the parameters  covariance matrix ($\Upsilon$) and mean vector($\xi$) is calculated as:
+This model is devised from the maximum likelihood paradigm, which has two parameters: covariance matrix and mean vector that maximizes the likelihood function. The Gaussian likelihood function \cite{vishwakarma2015efficient} has unique maxima, and the parameters  covariance matrix ($\Upsilon$) and mean vector($\xi$) are calculated as:
 
 \begin{equation}
 \begin{aligned}
@@ -602,30 +600,30 @@ g(y,\Upsilon,\xi) =  \frac{1}{(2\pi)^{\frac{d}{2}}\left(det\left(\xi \right)\rig
 \end{equation}
 
 Where d is the dimension of the feature vector, and \linebreak
-$\delta^2 =(y - \Upsilon_i)\xi^{-1}(y - \Upsilon_i)^T $ .From equation 4, the pixels can be classified as skin and non-skin color pixels by using the decision boundary. The probability density distribution of the formed Gaussian model is represented in figure:
+$\delta^2 =(y - \Upsilon_i)\xi^{-1}(y - \Upsilon_i)^T $ .From equation (7), the pixels can be classified as skin and non-skin color pixels by using the decision boundary. The probability density distribution of the formed Gaussian model is represented in Fig.2 :\\
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width = 6.5cm, height = 5cm]{skincolor}
 	\caption{ Graph describing variation of skin tones of human race in Chromatic colour model}
-\end{figure}
-Plotting a Gaussian Curve for this variation yields the Graph in figure 3.
+\end{figure}\\
+Plotting a Gaussian Curve for this variation yields the Graph in Fig 3.\\
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width = 6.5cm, height = 5cm]{gaussian}
 	\caption{Gaussian curve of variations in Fig.1}
 \end{figure}
 
-This Method has a great accuracy and calibration advantage over the YCbCr model and is thus more user-friendly. It can be calibrated for all fairer to darker skins with just a change in input skin section (which was trained for the Gaussian ); in contrast to change in Cb and Cr values which demand a technical blueprint.
+This Method has a great accuracy and calibration advantage over the YCbCr model and is thus more user-friendly. It can be calibrated for all fairer to darker skins with just a change in input skin segment (which was calibrated  with the Gaussian ); in contrast to change in Cb and Cr values which demand a technical blueprint.
 
 \subsection{PSEUDO CODE:}
 \begin{flushleft}
-$imresize([200 200])$ 
+$imresize([200 \, $ x $ \, 200])$ 
 
 SKIN SEGMENTATION:
 
-$train skin model : $
+$Calibrate \, skin \, model : $
 
-$function\_outputs[ mean(cr) ,mean(cb), cov(cr,cb)]$
+$function \, outputs[ mean(cr) ,mean(cb), cov(cr,cb)]$
 
 $x = [(cr-r_{mean});(cb-b_{mean})];$
 
@@ -637,9 +635,11 @@ $likely\_skin(i,j) = [power(2*pi*power(det(rbcov),0.5),-1)]*exp(-0.5*y'*inv(rbco
 
 $BW = im2bw(likely_skin,thresh); $ \% Morphological operations for segmenting the hand shape accurately
 
-$imclose;imdilate;imfill('holes');$
+$a \, =\, imclose(BW)$;\\
+$b \, =\, imdilate(a)$;\\
+$c \,=\, imfill('holes');$\\
 
-Find the hand(palm width) 
+Find the hand(palm) width. 
 \end{flushleft}
 \begin{figure}[h!]
 	\centering
