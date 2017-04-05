@@ -728,7 +728,7 @@ $bwareaopen(eroded\_image,40);$ \%dilate to obtain the original palm shape and s
 
 $fingers=~palm.*BW$ 
 
-$regionprops \rightarrow$ Area threshholding to count the no. of bounding box to count the number of fingers.
+$regionprops \rightarrow$ Area thresholding for bounding box to count the number of fingers.
 
 \begin{figure}[h!]
 	\centering
@@ -737,7 +737,7 @@ $regionprops \rightarrow$ Area threshholding to count the no. of bounding box to
 \end{figure}
 \end{flushleft}
 \subsection{Method 2: GRADIENT APPROACH}
-After acquiring a binary image of the segmented skin region, we extract the count of active fingers by using the information of the change of gradients at the finger-tip region.Once the centroid of the binary image is acquired, we determine the shortest distance to the boundary of the silhoutte from the centroid point. This minimum distance is defined in all directions from the centroid.The area hereafter produced showcases the mask for the binary silhouette.It comprises the palm region of the hand and thus forms the base of the mask  \cite{6481804}.Mask subtraction then gives us the fingertip section in addition to the wrist area.
+After acquiring a binary image of the segmented skin region, we extract the count of active fingers by using the information of the change of gradients at the finger-tip region. Once the centroid of the binary image is acquired, we determine the shortest distance to the boundary of the silhoutte from the centroid point. This minimum distance is defined in all directions from the centroid. The area hereafter produced showcases the mask for the binary silhouette. It comprises the palm region of the hand and thus forms the base of the mask  \cite{6481804}. Mask subtraction then gives us the fingertip section in addition to the wrist area.
 
 Gradients are calculated by using filters :
 
@@ -836,7 +836,7 @@ Accuracy is then given by $(c/t)*100$.
 \end{tabular}
 \caption{Hand Gestures used from Standard Database}
 \end{figure}
-We applied our algorithms on standard Massey University database \cite{barczak2011new} of images available online.We used only 5 hand gestures from the data-set. The skin segments taken to train our Gaussian skin model were randomly taken from the people of the same ethnicity as that of the dataset.
+We applied our algorithms on standard Massey University database \cite{barczak2011new} of images available online.We used 5 hand gestures from the data-set. The skin segments taken to calibrate our Gaussian skin model were randomly taken from the people of the same ethnicity as that of the dataset.
 
 Accuracy by Masking Approach: - 93.622\%
 
@@ -864,11 +864,11 @@ Accuracy by Gradient Approach: - 90.136\%
 \cmidrule(lr){2-6}
 \textbf{Actual Class} & \multicolumn{1}{c}{G1} & \multicolumn{1}{c}{G2} & \multicolumn{1}{c}{G3} & \multicolumn{1}{c}{G4} & \multicolumn{1}{c}{G5} \\
 \midrule
-\texttt{G1} &0.9275  &  0.0725  & 0  & 0 & 0\\
-\texttt{G2} &0  &  1  & 0  & 0 & 0\\ 
-\texttt{G3} &0  &  0  & 0.92  & 0.08 & 0\\
-\texttt{G4} &0  &  0  & 0.014  & 0.972 & 0.014\\
-\texttt{G5} &0  &  0  & 0  & 0.0923 & 0.8616\\
+\texttt{{\fontfamily{cmr}\selectfont G1}} &0.9275  &  0.0725  & 0  & 0 & 0\\
+\texttt{{\fontfamily{cmr}\selectfont G2}} &0  &  1  & 0  & 0 & 0\\ 
+\texttt{{\fontfamily{cmr}\selectfont G3}} &0  &  0  & 0.92  & 0.08 & 0\\
+\texttt{{\fontfamily{cmr}\selectfont G4}} &0  &  0  & 0.014  & 0.972 & 0.014\\
+\texttt{{\fontfamily{cmr}\selectfont G5}} &0  &  0  & 0  & 0.0923 & 0.8616\\
         \bottomrule             
 \end{tabular}
 \end{table}
@@ -882,11 +882,11 @@ Accuracy by Gradient Approach: - 90.136\%
 \cmidrule(lr){2-6}
 \textbf{Actual Class} & \multicolumn{1}{c}{G1} & \multicolumn{1}{c}{G2} & \multicolumn{1}{c}{G3} & \multicolumn{1}{c}{G4} & \multicolumn{1}{c}{G5} \\
 \midrule
-\texttt{G1} &0.884  &  0.116  & 0  & 0 & 0\\
-\texttt{G2} &0.0143  &  0.9429  & 0.0428  & 0 & 0\\
-\texttt{G3} &0.0133  &  0.12  & 0.8534  & 0.0133 & 0\\
-\texttt{G4} &0.014  &  0.014  & 0.07  & 0.888 & 0.014\\
-\texttt{G5} &0  &  0  & 0  & 0.0615 & 0.9385\\
+\texttt{{\fontfamily{cmr}\selectfont G1}} &0.884  &  0.116  & 0  & 0 & 0\\
+\texttt{{\fontfamily{cmr}\selectfont G2}} &0.0143  &  0.9429  & 0.0428  & 0 & 0\\
+\texttt{{\fontfamily{cmr}\selectfont G3}} &0.0133  &  0.12  & 0.8534  & 0.0133 & 0\\
+\texttt{{\fontfamily{cmr}\selectfont G4}} &0.014  &  0.014  & 0.07  & 0.888 & 0.014\\
+\texttt{{\fontfamily{cmr}\selectfont G5}} &0  &  0  & 0  & 0.0615 & 0.9385\\
         \bottomrule             
 \end{tabular}
 \end{table}
@@ -902,7 +902,7 @@ Accuracy by Gradient Approach: - 90.136\%
 \caption{Hand Gestures used from our created dataset}
 \end{figure}
 
-To have an understanding of real\- time results, we collect our database of images and further test the accuracy. Ten pictures of ten different individuals were taken. The skin segments taken to train our Gaussian skin model were randomly taken from the skin samples of people of various ethnicity and region like North Indians, South Indians, North \- East Indians to test the robustness of our algorithm.
+To have an understanding of real\- time results, we collect our database of images and further test the accuracy. Ten pictures of ten different individuals were taken. The skin segments taken to calibrate our Gaussian skin model were randomly taken from the skin samples of people of various ethnicity and region like North Indians, South Indians, North \- East Indians to test the robustness of our algorithm.
 
 Accuracy by Masking Approach : - 96\%
 
@@ -916,11 +916,11 @@ Accuracy by Gradient Approach : - 98\%
 \cmidrule(lr){2-6}
 \textbf{Actual Class} & \multicolumn{1}{c}{G1} & \multicolumn{1}{c}{G2} & \multicolumn{1}{c}{G3} & \multicolumn{1}{c}{G4} & \multicolumn{1}{c}{G5} \\
 \midrule
-\texttt{G1} &1  &  0  & 0  & 0 & 0\\
-\texttt{G2} &0  &  0.9  & 0.1  & 0 & 0\\ 
-\texttt{G3} &0  &  0  & 1  & 0 & 0\\
-\texttt{G4} &0  &  0  & 0  & 1 & 0\\
-\texttt{G5} &0  &  0  & 0  & 0.3 & 0.7\\
+\texttt{{\fontfamily{cmr}\selectfont G1}} &1  &  0  & 0  & 0 & 0\\
+\texttt{{\fontfamily{cmr}\selectfont G2}} &0  &  0.9  & 0.1  & 0 & 0\\ 
+\texttt{{\fontfamily{cmr}\selectfont G3}} &0  &  0  & 1  & 0 & 0\\
+\texttt{{\fontfamily{cmr}\selectfont G4}} &0  &  0  & 0  & 1 & 0\\
+\texttt{{\fontfamily{cmr}\selectfont G5}} &0  &  0  & 0  & 0.3 & 0.7\\
         \bottomrule             
 \end{tabular}
 \end{table}
@@ -934,11 +934,11 @@ Accuracy by Gradient Approach : - 98\%
 \cmidrule(lr){2-6}
 \textbf{Actual Class} & \multicolumn{1}{c}{G1} & \multicolumn{1}{c}{G2} & \multicolumn{1}{c}{G3} & \multicolumn{1}{c}{G4} & \multicolumn{1}{c}{G5} \\
 \midrule
-\texttt{G1} &1  &  0  & 0  & 0 & 0\\
-\texttt{G2} &0  &  1  & 0  & 0 & 0\\
-\texttt{G3} &0  &  0  & 1  & 0 & 0\\
-\texttt{G4} &0  &  0  & 0  & 1 & 0\\
-\texttt{G5} &0  &  0  & 0  & 0.3 & 0.7\\
+\texttt{{\fontfamily{cmr}\selectfont G1}} &1  &  0  & 0  & 0 & 0\\
+\texttt{{\fontfamily{cmr}\selectfont G2}} &0  &  1  & 0  & 0 & 0\\
+\texttt{{\fontfamily{cmr}\selectfont G3}} &0  &  0  & 1  & 0 & 0\\
+\texttt{{\fontfamily{cmr}\selectfont G4}} &0  &  0  & 0  & 1 & 0\\
+\texttt{{\fontfamily{cmr}\selectfont G5}} &0  &  0  & 0  & 0.3 & 0.7\\
         \bottomrule             
 \end{tabular}
 \end{table}
