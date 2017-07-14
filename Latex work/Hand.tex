@@ -470,10 +470,10 @@ Email: \IEEEauthorrefmark{1}dvishwakarma@gmail.com ,\IEEEauthorrefmark{2}sahibma
 % As a general rule, do not put math, special symbols or citations
 % in the abstract
 \begin{abstract}
-The main purpose of gesture recognition systems is to understand important expressions of motion by humans which involve hands, head, face, arms, or body.It is of major importance in designing an expert interface between humans and computers.We take into account the two possible fixed geometries to work on. The proposed methods follow the procedure of Preprocessing which helps with noise removal and image enhancement; Segmentation of hand region uses skin likelihood method to extract skin color; Feature extraction uses morphological and geometry based functions to extract the fingers; and active fingers are counted by method of Rule based Classification. In order to test performance, an experiment is conducted using standard and a self-generated dataset of images. The accuracy achieved on these dataset is greater than on similar state of arts.\\
+The main purpose of gesture recognition systems is to understand important expressions of motion by humans which involve hands, head, face, arms, or body. It is of major importance in designing an expert interface between humans and computers. We take into account the two possible fixed geometries to work on. The proposed methods follow the procedure of Pre-processing which helps with noise removal and image enhancement; Segmentation of hand region uses skin likelihood method to extract skin color; Feature extraction uses morphological and geometry based functions to extract the fingers; and active fingers are counted by method of Rule based Classification. In order to test performance, an experiment is conducted using standard and a self-generated dataset of images. The accuracy achieved on these dataset is greater than the similar state-of-the-art.\\
 
 \begin{IEEEkeywords}
-\textit{Hand Gestures, Skin Segmentation, Active Fingers, Finger Count, Mask Generation, Recognition, Low Resolution}
+\textit{Hand Gestures, Skin Segmentation, Active Fingers, Finger Count, Mask Generation, Recognition, Low Resolution.}
 
 \end{IEEEkeywords}
  
@@ -498,7 +498,7 @@ The main purpose of gesture recognition systems is to understand important expre
 
 \section{Introduction}
 An efficient human computer interplay is prominent in the present day framework of interactive and smart computing. Gesture recognition is the leading progress in this direction.
-Gesture recognition is the substantiated analysis of a human movement by a computing device
+Gesture recognition is the substantiated analysis of a human movement by a computing device.
 
  There are methods which use extra hardware accessories such as color markers and data glove devices to easily extract a complete classification of gesture traits for identification \cite{1199054} . Neural Network classifiers have been implemented for gestures classification \cite{Murakami:1991:GRU:108844.108900} but it is long-drawn out and as the amount of training data grows, the time necessitated for classification is extended. Orientation histogram method \cite{freeman1995orientation} has some inherent difficulties like different gestures could have related orientation histograms, and related gestures might have distinctive orientation histograms. Other methods based on the appearance of the hand use the color of our skin to section the hand and obtain necessary features, these methods are considered natural, simple and less computationally costly compared with methods mentioned before \cite{1199054} .
 
@@ -641,13 +641,21 @@ $c \,=\, imfill('holes');$\\
 
 Find the hand(palm) width. 
 \end{flushleft}
-\begin{figure}[h!]
-	\centering
-	\includegraphics[width = 5.5cm, height = 5.5cm]{grid1}
-	%\caption{Gaussian curve of variations in Fig.1}
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics[width = 5.5cm, height = 5.5cm]{grid1}
+%	%\caption{Gaussian curve of variations in Fig.1}
+%\end{figure}
+
+\begin{figure}[!h]
+\centering
+\begin{tabular}{ccc}
+\subfloat[\, \, \, \, \, RGB Image]{\includegraphics[width = 0.55in]{res1}} &
+\subfloat[\, \, \, \, \, \, \,Skin Likelihood]{\includegraphics[width = 0.55in]{res2}} &
+\subfloat[Segmented Image]{\includegraphics[width = 0.55in]{res3}}
+\end{tabular}
+%\caption{Gestures used with extracted ROI}
 \end{figure}
-
-
 
 \section{PROPOSED METHODS}
 

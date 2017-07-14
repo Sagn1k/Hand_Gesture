@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.30)  5 APR 2017 20:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.30)  6 APR 2017 20:07
 entering extended mode
 **./Hand.tex
 (Hand.tex
@@ -532,134 +532,150 @@ File: images/gaussian.jpg Graphic file (type jpg)
 <use images/gaussian.jpg>
 Package pdftex.def Info: images/gaussian.jpg used on input line 612.
 (pdftex.def)             Requested size: 184.93813pt x 142.261pt.
+ [2 <./images/ges1.png> <./images/ges2.png> <./images/ges3.png> <./images/ges4.
+png> <./images/ges5.png> <./images/skincolor.jpg> <./images/gaussian.jpg>] <ima
+ges/res1.png, id=35, 70.46326pt x 205.36725pt>
+File: images/res1.png Graphic file (type png)
+
+<use images/res1.png>
+Package pdftex.def Info: images/res1.png used on input line 653.
+(pdftex.def)             Requested size: 39.74872pt x 115.85095pt.
+ <images/res2.png, id=36, 70.46326pt x 205.36725pt>
+File: images/res2.png Graphic file (type png)
+
+<use images/res2.png>
+Package pdftex.def Info: images/res2.png used on input line 654.
+(pdftex.def)             Requested size: 39.74872pt x 115.85095pt.
+ <images/res3.png, id=37, 70.46326pt x 205.36725pt>
+File: images/res3.png Graphic file (type png)
+
+<use images/res3.png>
+Package pdftex.def Info: images/res3.png used on input line 655.
+(pdftex.def)             Requested size: 39.74872pt x 115.85095pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 655--655
+[]\OT1/ptm/m/n/8 (c)
+ []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 655--655
+|\OT1/ptm/m/n/8 Seg-mented
+ []
 
-[2 <./images/ges1.png> <./images/ges2.png> <./images/ges3.png> <./images/ges4.p
-ng> <./images/ges5.png> <./images/skincolor.jpg> <./images/gaussian.jpg>]
-<images/grid1.png, id=35, 219.82124pt x 225.84375pt>
-File: images/grid1.png Graphic file (type png)
- <use images/grid1.png>
-Package pdftex.def Info: images/grid1.png used on input line 646.
-(pdftex.def)             Requested size: 156.49344pt x 156.49744pt.
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 723.
-
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 731.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omlptm.fd"
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 723.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 731.
 
-<images/method1_1.png, id=36, 240.29774pt x 84.91725pt>
+<images/method1_1.png, id=38, 240.29774pt x 84.91725pt>
 File: images/method1_1.png Graphic file (type png)
 
 <use images/method1_1.png>
-Package pdftex.def Info: images/method1_1.png used on input line 735.
+Package pdftex.def Info: images/method1_1.png used on input line 743.
 (pdftex.def)             Requested size: 227.62155pt x 85.36017pt.
- [3 <./images/grid1.png> <./images/method1_1.png>]
-<images/method2_5.png, id=40, 194.52675pt x 193.9245pt>
+ [3 <./images/res1.png> <./images/res2.png> <./images/res3.png> <./images/metho
+d1_1.png>]
+<images/method2_5.png, id=44, 194.52675pt x 193.9245pt>
 File: images/method2_5.png Graphic file (type png)
 
 <use images/method2_5.png>
-Package pdftex.def Info: images/method2_5.png used on input line 784.
+Package pdftex.def Info: images/method2_5.png used on input line 792.
 (pdftex.def)             Requested size: 65.04256pt x 64.84155pt.
- <images/plot5.png, id=41, 528.5346pt x 298.83646pt>
+ <images/plot5.png, id=45, 528.5346pt x 298.83646pt>
 File: images/plot5.png Graphic file (type png)
 
 <use images/plot5.png>
-Package pdftex.def Info: images/plot5.png used on input line 785.
+Package pdftex.def Info: images/plot5.png used on input line 793.
 (pdftex.def)             Requested size: 115.63243pt x 65.37943pt.
- <images/method2_4.png, id=42, 193.9245pt x 190.91325pt>
+ <images/method2_4.png, id=46, 193.9245pt x 190.91325pt>
 File: images/method2_4.png Graphic file (type png)
 
 <use images/method2_4.png>
-Package pdftex.def Info: images/method2_4.png used on input line 792.
+Package pdftex.def Info: images/method2_4.png used on input line 800.
 (pdftex.def)             Requested size: 65.04256pt x 64.03279pt.
- <images/plot4.png, id=43, 528.5346pt x 298.83646pt>
+ <images/plot4.png, id=47, 528.5346pt x 298.83646pt>
 File: images/plot4.png Graphic file (type png)
 
 <use images/plot4.png>
-Package pdftex.def Info: images/plot4.png used on input line 793.
+Package pdftex.def Info: images/plot4.png used on input line 801.
 (pdftex.def)             Requested size: 115.63243pt x 65.37943pt.
- <images/method2_2.png, id=44, 192.72pt x 190.311pt>
+ <images/method2_2.png, id=48, 192.72pt x 190.311pt>
 File: images/method2_2.png Graphic file (type png)
 
 <use images/method2_2.png>
-Package pdftex.def Info: images/method2_2.png used on input line 800.
+Package pdftex.def Info: images/method2_2.png used on input line 808.
 (pdftex.def)             Requested size: 65.04256pt x 64.22864pt.
- <images/plot2.png, id=45, 528.5346pt x 298.83646pt>
+ <images/plot2.png, id=49, 528.5346pt x 298.83646pt>
 File: images/plot2.png Graphic file (type png)
 
 <use images/plot2.png>
-Package pdftex.def Info: images/plot2.png used on input line 801.
+Package pdftex.def Info: images/plot2.png used on input line 809.
 (pdftex.def)             Requested size: 115.63243pt x 65.37943pt.
 File: images/ges1.png Graphic file (type png)
  <use images/ges1.png>
-Package pdftex.def Info: images/ges1.png used on input line 831.
+Package pdftex.def Info: images/ges1.png used on input line 839.
 (pdftex.def)             Requested size: 39.74872pt x 47.70271pt.
 File: images/ges2.png Graphic file (type png)
  <use images/ges2.png>
-Package pdftex.def Info: images/ges2.png used on input line 832.
+Package pdftex.def Info: images/ges2.png used on input line 840.
 (pdftex.def)             Requested size: 39.74872pt x 47.70271pt.
 File: images/ges3.png Graphic file (type png)
 
 <use images/ges3.png>
-Package pdftex.def Info: images/ges3.png used on input line 833.
+Package pdftex.def Info: images/ges3.png used on input line 841.
 (pdftex.def)             Requested size: 39.74872pt x 47.70271pt.
 File: images/ges4.png Graphic file (type png)
  <use images/ges4.png>
-Package pdftex.def Info: images/ges4.png used on input line 834.
+Package pdftex.def Info: images/ges4.png used on input line 842.
 (pdftex.def)             Requested size: 39.74872pt x 47.70271pt.
 File: images/ges5.png Graphic file (type png)
  <use images/ges5.png>
-Package pdftex.def Info: images/ges5.png used on input line 835.
+Package pdftex.def Info: images/ges5.png used on input line 843.
 (pdftex.def)             Requested size: 39.74872pt x 47.70271pt.
 
-Overfull \hbox (6.74359pt too wide) in paragraph at lines 830--837
+Overfull \hbox (6.74359pt too wide) in paragraph at lines 838--845
 [][] 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 867.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 875.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-<images/geo1.png, id=46, 36.135pt x 60.225pt>
+<images/geo1.png, id=50, 36.135pt x 60.225pt>
 File: images/geo1.png Graphic file (type png)
  <use images/geo1.png>
-Package pdftex.def Info: images/geo1.png used on input line 896.
+Package pdftex.def Info: images/geo1.png used on input line 904.
 (pdftex.def)             Requested size: 39.74872pt x 66.25136pt.
 
-<images/geo2.png, id=47, 36.135pt x 60.225pt>
+<images/geo2.png, id=51, 36.135pt x 60.225pt>
 File: images/geo2.png Graphic file (type png)
  <use images/geo2.png>
-Package pdftex.def Info: images/geo2.png used on input line 897.
+Package pdftex.def Info: images/geo2.png used on input line 905.
 (pdftex.def)             Requested size: 39.74872pt x 66.25136pt.
 
-<images/geo3.png, id=48, 36.135pt x 60.225pt>
+<images/geo3.png, id=52, 36.135pt x 60.225pt>
 File: images/geo3.png Graphic file (type png)
  <use images/geo3.png>
-Package pdftex.def Info: images/geo3.png used on input line 898.
+Package pdftex.def Info: images/geo3.png used on input line 906.
 (pdftex.def)             Requested size: 39.74872pt x 66.25136pt.
 
-<images/geo4.png, id=49, 36.135pt x 60.225pt>
+<images/geo4.png, id=53, 36.135pt x 60.225pt>
 File: images/geo4.png Graphic file (type png)
  <use images/geo4.png>
-Package pdftex.def Info: images/geo4.png used on input line 899.
+Package pdftex.def Info: images/geo4.png used on input line 907.
 (pdftex.def)             Requested size: 39.74872pt x 66.25136pt.
 
-<images/geo5.png, id=50, 36.135pt x 60.225pt>
+<images/geo5.png, id=54, 36.135pt x 60.225pt>
 File: images/geo5.png Graphic file (type png)
  <use images/geo5.png>
-Package pdftex.def Info: images/geo5.png used on input line 900.
+Package pdftex.def Info: images/geo5.png used on input line 908.
 (pdftex.def)             Requested size: 39.74872pt x 66.25136pt.
 
-Overfull \hbox (6.74359pt too wide) in paragraph at lines 895--902
+Overfull \hbox (6.74359pt too wide) in paragraph at lines 903--910
 [][] 
  []
 
@@ -680,13 +696,13 @@ Before submitting the final camera ready copy, remember to:
 
 [5] (Hand.aux) ) 
 Here is how much of TeX's memory you used:
- 5886 strings out of 493333
- 92198 string characters out of 3139171
+ 5896 strings out of 493333
+ 92367 string characters out of 3139171
  282002 words of memory out of 3000000
- 9301 multiletter control sequences out of 15000+200000
+ 9309 multiletter control sequences out of 15000+200000
  41401 words of font info for 83 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
- 44i,18n,49p,967b,435s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,18n,49p,967b,436s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKT
@@ -702,9 +718,9 @@ am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files
 type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/u
 tmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Hand.pdf (5 pages, 1390212 bytes).
+Output written on Hand.pdf (5 pages, 1387867 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
+ 118 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 
